@@ -1,5 +1,6 @@
 from enum import Enum
 import random
+import signal
 import sys
 from termcolor import colored
 
@@ -113,10 +114,6 @@ class Board:
     def hasSet(self):
         return 
 
-    def listCards(self):
-        return 
-
-
 class Player:
 
     def __init__(self):
@@ -152,17 +149,25 @@ class Game:
             for c in self.board.cards:
                 print(c)
 
+            # Multiplex on input from players
+            # but for now, hard code to one player on term
+
             v = input("Find a set: ")
             if v == 'q': 
                 self.quit()
-
-            if self.board.removeSet(v.split()):
+            elif v == 'n': 
+                if self.board.hasSet():
+                    print("WRONG!")
+                else:
+                    print("NO SET!")
+                    self.board.placeCard(self.cards.pop())
+                    self.board.placeCard(self.cards.pop())
+                    self.board.placeCard(self.cards.pop())
+            elif self.board.removeSet(v.split()):
                 print("SET!")
                 self.board.placeCard(self.cards.pop())
                 self.board.placeCard(self.cards.pop())
                 self.board.placeCard(self.cards.pop())
-            else:
-                print("NO SET!")
 
         return 
 
@@ -172,6 +177,7 @@ class Game:
     def end(self):
         return 
 
+signal.signal(signal.SIGINT, lambda signal, frame: sys.exit(0))
 game = Game()
 game.players.append(Player())
 game.start()
