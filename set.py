@@ -72,7 +72,8 @@ class Card:
 
     def __str__(self):
         shape = self.shape.name if self.number == Number.one else self.shape.name + 's'
-        return colored(" " .join([str(self.number.value), self.fill.name, shape]), self.color.name)
+        c = colored(" " .join([str(self.number.value), self.fill.name, shape]), self.color.name)
+        return '{:<35}'.format(c)
 
     def isSet(a, b, c):
 
@@ -112,7 +113,15 @@ class Board:
             return False
 
     def hasSet(self):
-        return 
+        N = len(self.cards)
+
+        for i in range(0, N - 2):
+            for j in range(i + 1, N - 1):
+                for k in range(j + 1, N):
+                    if Card.isSet(self.cards[i], self.cards[j], self.cards[k]):
+                        return True
+
+        return False
 
 class Player:
 
@@ -146,8 +155,9 @@ class Game:
 
         while True:
 
-            for c in self.board.cards:
-                print(c)
+            for index, c in enumerate(self.board.cards):
+                end = " " if (index - 2) % 3 != 0 else "\n"
+                print(c, end=end)
 
             # Multiplex on input from players
             # but for now, hard code to one player on term
