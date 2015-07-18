@@ -59,9 +59,9 @@ class Color(Enum):
     red = 2
     blue = 3
 class Shape(Enum):
-    squiggle = 1
-    diamond = 2
-    oval = 3
+    squiggle = u'\u20DE' # square
+    diamond = u'\u20DF' # diamond
+    oval = u'\u25EF' #circle
 
 class Card:
     def __init__(self, number, fill, color, shape):
@@ -71,9 +71,9 @@ class Card:
         self.shape = shape
 
     def __str__(self):
-        shape = self.shape.name if self.number == Number.one else self.shape.name + 's'
-        c = colored(" " .join([str(self.number.value), self.fill.name, shape]), self.color.name)
-        return '{:<35}'.format(c)
+        # shape =  str(self.shape.value)
+        shape =  self.shape.name
+        return colored(" " .join([str(self.number.value), self.fill.name, shape]), self.color.name)
 
     def isSet(a, b, c):
 
@@ -88,7 +88,6 @@ class Board:
 
     def __init__(self):
         self.cards = []
-        self.numCards = 0
 
     def placeCard(self, card):
         self.cards.append(card)
@@ -157,17 +156,17 @@ class Game:
 
             for index, c in enumerate(self.board.cards):
                 end = " " if (index - 2) % 3 != 0 else "\n"
-                print(c, end=end)
+                print('({:2n}) {:<33}'.format(index+1, str(c)), end=end)
 
             # Multiplex on input from players
             # but for now, hard code to one player on term
 
             v = input("Find a set: ")
-            if v == 'q': 
+            if v.startswith('q'): 
                 self.quit()
-            elif v == 'n': 
+            elif v.startswith('n'): 
                 if self.board.hasSet():
-                    print("WRONG!")
+                    print("WRONG, THERE IS A SET!")
                 else:
                     print("NO SET!")
                     self.board.placeCard(self.cards.pop())
@@ -175,9 +174,12 @@ class Game:
                     self.board.placeCard(self.cards.pop())
             elif self.board.removeSet(v.split()):
                 print("SET!")
-                self.board.placeCard(self.cards.pop())
-                self.board.placeCard(self.cards.pop())
-                self.board.placeCard(self.cards.pop())
+                if (len(self.board.cards) < 12) :
+                    self.board.placeCard(self.cards.pop())
+                    self.board.placeCard(self.cards.pop())
+                    self.board.placeCard(self.cards.pop())
+            else:
+                print(v + "IS NOT A SET!")
 
         return 
 
