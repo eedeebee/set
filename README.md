@@ -1,3 +1,7 @@
+# Pre-requisites
+
+    % pip3 install termcolor
+
 # Logic
 
 1. Start a game
