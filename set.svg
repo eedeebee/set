@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <g id="diamond">
+            <polygon stroke="inherit" fill="inherit" points="18,10 36,50 18,90 0,50" />
+        </g>
+        <g id="squiggle">
+            <rect stroke="inherit" fill="inherit" x="0" y="15" width="36" height="66" />
+        </g>
+        <g id="oval">
+            <path d="M 36 30 
+                     A 18 18 180 0 0 0 30 
+                     L 0 66
+                     A 18 18 180 0 0 36 66
+                     L 36 30 " /> 
+
+        </g>
+    </defs>
+</svg>

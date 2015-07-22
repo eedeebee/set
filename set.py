@@ -75,7 +75,11 @@ class Card:
         shape =  self.shape.name
         return colored(" " .join([str(self.number.value), self.fill.name, shape]), self.color.name)
 
-    def isSet(a, b, c):
+    def isSet(set):
+
+        a = set[0]
+        b = set[1]
+        c = set[2]
 
         numberOK =  ((a.number == b.number == c.number) or (a.number != b.number and b.number != c.number and a.number != c.number))
         fillOK =  ((a.fill == b.fill == c.fill) or (a.fill != b.fill and b.fill != c.fill and a.fill != c.fill))
@@ -104,7 +108,7 @@ class Board:
         x = int(s[0]) - 1
         y = int(s[1]) - 1
         z = int(s[2]) - 1
-        if Card.isSet(self.cards[x], self.cards[y], self.cards[z]):
+        if Card.isSet([self.cards[x], self.cards[y], self.cards[z]]):
             for c in sorted([x, y, z], reverse=True):
                 self.cards.pop(c)
             return True
@@ -117,8 +121,9 @@ class Board:
         for i in range(0, N - 2):
             for j in range(i + 1, N - 1):
                 for k in range(j + 1, N):
-                    if Card.isSet(self.cards[i], self.cards[j], self.cards[k]):
-                        return True
+                    set = self.cards[i], self.cards[j], self.cards[k]
+                    if Card.isSet(set):
+                        return set
 
         return False
 
@@ -164,11 +169,23 @@ class Game:
             v = input("Find a set: ")
             if v.startswith('q'): 
                 self.quit()
+            elif v.startswith('h'): 
+                s = self.board.hasSet()
+                if s:
+                    print("Hint: first card is: " + str(s[0]))
+                else:
+                    print("No set!")
+            elif v.startswith('i'): 
+                s = self.board.hasSet()
+                if s:
+                    print("Hint: second card is: " + str(s[1]))
+                else:
+                    print("No set!")
             elif v.startswith('n'): 
                 if self.board.hasSet():
-                    print("WRONG, THERE IS A SET!")
+                    print("Wrong, there is a SET!")
                 else:
-                    print("NO SET!")
+                    print("No SET!")
                     self.board.placeCard(self.cards.pop())
                     self.board.placeCard(self.cards.pop())
                     self.board.placeCard(self.cards.pop())
@@ -179,7 +196,7 @@ class Game:
                     self.board.placeCard(self.cards.pop())
                     self.board.placeCard(self.cards.pop())
             else:
-                print(v + "IS NOT A SET!")
+                print(v + " is not a SET!")
 
         return 
 

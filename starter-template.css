@@ -20,3 +20,39 @@ body {
     margin-right: auto;
     display: block;
 }
+
+.card {
+    width:  180px;
+    height: 100px;
+    stroke-width: 1;
+}
+
+.empty {
+    fill: none;
+}
+
+.solid.purple {
+    fill: purple;
+}
+.solid.red {
+    fill: red;
+}
+.solid.green {
+    fill: #060;
+}
+
+.purple {
+    stroke: purple;
+}
+
+.green {
+    stroke: #060;
+}
+
+.red {
+    stroke: red;
+}
+
+.one_of_one {
+    x: 72;
+}
