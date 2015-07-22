@@ -153,9 +153,18 @@ class Game:
 
         random.shuffle(self.cards)
 
+    def help(self):
+        print('h is hint')
+        print('? is help')
+        print('n is no set')
+        print('q is quit')
+        print('Otherwise provide 3 card numbers that are a set')
+
     def start(self):
         for x in range(0,12):
             self.board.placeCard(self.cards.pop())
+
+        self.help()
 
         while True:
 
@@ -166,9 +175,12 @@ class Game:
             # Multiplex on input from players
             # but for now, hard code to one player on term
 
-            v = input("Find a set: ")
+            v = input("Find a set (or ?, h, n, q): ")
+            
             if v.startswith('q'): 
                 self.quit()
+            elif v.startswith('?'): 
+                self.help()
             elif v.startswith('h'): 
                 s = self.board.hasSet()
                 if s:
