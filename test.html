@@ -144,8 +144,11 @@
             var d = d3.select('.container').selectAll("div.cell")
                 .data(board);
 
-            var c = d.enter().append("div").attr("class", "cell").insert("svg")
-                .attr("class", function(d) { return cardToCSSClass(d); }) 
+            var c = d.enter().insert("div").attr("class", "cell").insert("svg")
+                .attr("opacity", 0)
+                .attr("class", function(d) { return cardToCSSClass(d); });
+
+            c.transition().duration(750).style("opacity", 1); 
 
                 c.insert("pattern").attr("id", "lines").attr("patternUnits", "userSpaceOnUse")
                     .attr('x', '0').attr('y', '0').attr('width', '5').attr('height', '5')
@@ -154,17 +157,23 @@
                 c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;})
                     .attr('x', function(d) { return cardToS1x(d);} )
                     .attr('style', function(d) { return cardToFillStyleAttr(d); } );
-                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;}).attr('x', 72)
+                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;})
                     .attr('x', function(d) { return cardToS2x(d);} )
                     .attr('style', function(d) { return cardToFillStyleAttr(d); } );
-                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;}).attr('x', 122)
+                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;})
                     .attr('x', function(d) { return cardToS3x(d);} )
                     .attr('style', function(d) { return cardToFillStyleAttr(d); } );
 
-            // d.text(function(d) { return cardToText(d);});
+            d.exit().transition()
+                .duration(750)
+                .style("opacity", 0)
+                .remove();
 
-            d.exit().remove();
+        }
 
+        function doClear() {
+            board = [];
+            update();
         }
 
         function threeMore() {
@@ -175,12 +184,13 @@
         }
 
         function doit() {
-            deal();
-
             for (var i = 0; i < 4; i++) {
                 threeMore();
             }
         }
+
+        deal();
+
 
     </script>
     
@@ -199,7 +209,7 @@
                 <button onclick="threeMore()">Three More</button>
         </div>
         <div class="col-xs-6 col-sm-4">
-                <button onclick="noSet()">No set</button>
+                <button onclick="doClear()">Clear</button>
         </div>
       </div>
     </div>
