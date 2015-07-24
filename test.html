@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="eric.bloch+set@gmail.com">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Set</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="set.css" rel="stylesheet">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <defs>
+            <g id="diamond">
+                <polygon stroke="inherit" fill="inherit" points="18,10 36,50 18,90 0,50" />
+            </g>
+            <g id="squiggle">
+                <rect stroke="inherit" fill="inherit" x="0" y="15" width="36" height="66" />
+            </g>
+            <g id="oval">
+                <path d="M 36 30 
+                         A 18 18 180 0 0 0 30 
+                         L 0 66
+                         A 18 18 180 0 0 36 66
+                         L 36 30 " /> 
+    
+            </g>
+            <g id="line-1">
+                <g class="line-pattern">
+                    <path d="M0,0 l5,5"/>
+                </g>
+            </g>
+        </defs>
+    </svg>
+
+    <script>
+
+        /**
+         * Randomize array element order in-place.
+         * Using Fisher-Yates shuffle algorithm.
+         */
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            return array;
+        }
+
+        var Numbers = [1, 2, 3];
+        var Colors  = ['red', 'green', 'purple'];
+        var Shapes  = ['oval', 'diamond', 'squiggle'];
+        var Fills   = ['solid', 'empty', 'lines'];
+            
+        function isSet(a, b, c) {
+
+            numberOK =  ((a.num == b.num == c.num) || (a.num != b.num && b.num != c.num && a.num != c.num))
+            fillOK =  ((a.fill == b.fill == c.fill) || (a.fill != b.fill && b.fill != c.fill && a.fill != c.fill))
+            colorOK =  ((a.color == b.color == c.color) || (a.color != b.color && b.color != c.color && a.color != c.color))
+            shapeOK =  ((a.shape == b.shape == c.shape) || (a.shape != b.shape && b.shape != c.shape && a.shape != c.shape))
+
+            return colorOK && fillOK && shapeOK && numberOK
+
+        }
+
+        var deck = [];
+        var board = [];
+        
+        function deal() {
+
+            // Create deck
+            for (var n in Numbers) {
+                for (var f in Fills) {
+                    for (var c in Colors) {
+                        for (var s in Shapes) {
+                            deck.push({
+                                num: Numbers[n],
+                                fill: Fills[f],
+                                color: Colors[c],
+                                shape: Shapes[s]
+                            });
+                        }
+                    }
+                }
+            }
+            shuffleArray(deck);
+        };
+
+        function cardToS1x(c) {
+            switch(c.num) {
+                case 1: return 72;
+                case 2: return 47;
+                case 3: return 22;
+            }
+        }
+        function cardToS2x(c) {
+            switch(c.num) {
+                case 1: return 72;
+                case 2: return 97;
+                case 3: return 72;
+            }
+        }
+        function cardToS3x(c) {
+            switch(c.num) {
+                case 1: return 72;
+                case 2: return 97;
+                case 3: return 122;
+            }
+        }
+
+        function cardToCSSClass(c) {
+            return "card " + c.color + " " + c.fill;
+        }
+
+        function cardToFillStyleAttr(c) {
+            if (c.fill == 'lines') 
+                return "fill:url('#lines')";
+            else
+                return "";
+        }
+
+        function cardToText(c) {
+            return  c.num + ' ' + 
+                    c.fill + ' ' + 
+                    c.color + ' ' + 
+                    c.shape;
+        }
+
+        var cardsPerRow = 3;
+
+        function nextCardFromDeck() {
+            board.push(deck.pop());
+        };
+
+        
+        function update() {
+
+            var d = d3.select('.container').selectAll("div.cell")
+                .data(board);
+
+            var c = d.enter().append("div").attr("class", "cell").insert("svg")
+                .attr("class", function(d) { return cardToCSSClass(d); }) 
+
+                c.insert("pattern").attr("id", "lines").attr("patternUnits", "userSpaceOnUse")
+                    .attr('x', '0').attr('y', '0').attr('width', '5').attr('height', '5')
+                    .insert('use').attr('xlink:href', '#line-1');
+
+                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;})
+                    .attr('x', function(d) { return cardToS1x(d);} )
+                    .attr('style', function(d) { return cardToFillStyleAttr(d); } );
+                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;}).attr('x', 72)
+                    .attr('x', function(d) { return cardToS2x(d);} )
+                    .attr('style', function(d) { return cardToFillStyleAttr(d); } );
+                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;}).attr('x', 122)
+                    .attr('x', function(d) { return cardToS3x(d);} )
+                    .attr('style', function(d) { return cardToFillStyleAttr(d); } );
+
+            // d.text(function(d) { return cardToText(d);});
+
+            d.exit().remove();
+
+        }
+
+        function threeMore() {
+            for (var i = 0; i < 3; i++) {
+                nextCardFromDeck();
+            }
+            update();
+        }
+
+        function doit() {
+            deal();
+
+            for (var i = 0; i < 4; i++) {
+                threeMore();
+            }
+        }
+
+    </script>
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+    <hr/>
+
+      <div class="row"/>
+        <div class="col-xs-6 col-sm-4">
+                <button onclick="doit()">Doit</button>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+                <button onclick="threeMore()">Three More</button>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+                <button onclick="noSet()">No set</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bower_components/d3/d3.min.js"></script>
+  </body>
+</html>
