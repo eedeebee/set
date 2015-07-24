@@ -138,35 +138,60 @@
             board.push(deck.pop());
         };
 
+        function rows(ar) {
+            var r = [];
+            var a = [];
+            for (var i = 0; i < ar.length; i++) {
+                r.push(ar[i])
+                if (i % 3 == 2) {
+                    a.push(r);
+                    r = [];
+                }
+            }
+            if (r.length > 0) {
+                a.push(r);
+            }
+            return a;
+        }
+
         
         function update() {
 
-            var d = d3.select('.container').selectAll("div.cell")
-                .data(board);
+            var d = d3.select('.container').selectAll('.row').data(rows(board));
 
-            var c = d.enter().insert("div").attr("class", "cell").insert("svg")
-                .attr("opacity", 0)
-                .attr("class", function(d) { return cardToCSSClass(d); });
+            var r = d.enter().insert('div').attr('class', 'row').selectAll('.cell').data(function(d, i) { return d; });
 
-            c.transition().duration(750).style("opacity", 1); 
+            var c = r.enter()
+                .insert('div').attr('class', 'col-xs-6 col-sm-4')
+                .insert('div').attr('class', 'cell')
+                .insert('svg')
+                    .attr('opacity', 0)
+                    .attr('class', function(d) { return cardToCSSClass(d); });
 
-                c.insert("pattern").attr("id", "lines").attr("patternUnits", "userSpaceOnUse")
+            c.transition().duration(750).style('opacity', 1); 
+
+                c.insert('pattern').attr('id', 'lines').attr('patternUnits', 'userSpaceOnUse')
                     .attr('x', '0').attr('y', '0').attr('width', '5').attr('height', '5')
                     .insert('use').attr('xlink:href', '#line-1');
 
-                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;})
+                c.append('use').attr('xlink:href', function(d) { return '#' + d.shape;})
                     .attr('x', function(d) { return cardToS1x(d);} )
                     .attr('style', function(d) { return cardToFillStyleAttr(d); } );
-                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;})
+                c.append('use').attr('xlink:href', function(d) { return '#' + d.shape;})
                     .attr('x', function(d) { return cardToS2x(d);} )
                     .attr('style', function(d) { return cardToFillStyleAttr(d); } );
-                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;})
+                c.append('use').attr('xlink:href', function(d) { return '#' + d.shape;})
                     .attr('x', function(d) { return cardToS3x(d);} )
                     .attr('style', function(d) { return cardToFillStyleAttr(d); } );
 
+            r.exit().transition()
+                .duration(750)
+                .style('opacity', 0)
+                .remove();
+
             d.exit().transition()
                 .duration(750)
-                .style("opacity", 0)
+                .style('opacity', 0)
                 .remove();
 
         }
@@ -198,20 +223,11 @@
 
   <body>
 
+                <button onclick="doit()">Doit</button>
+                <button onclick="threeMore()">Three More</button>
+                <button onclick="doClear()">Clear</button>
     <div class="container">
     <hr/>
-
-      <div class="row"/>
-        <div class="col-xs-6 col-sm-4">
-                <button onclick="doit()">Doit</button>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-                <button onclick="threeMore()">Three More</button>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-                <button onclick="doClear()">Clear</button>
-        </div>
-      </div>
     </div>
 
     <script src="jquery/jquery.min.js"></script>
