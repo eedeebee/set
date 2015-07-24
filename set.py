@@ -52,7 +52,7 @@ class Number(Enum):
     three = 3
 class Fill(Enum):
     solid = 1
-    linefilled = 2
+    lines = 2
     empty = 3
 class Color(Enum):
     green = 1
@@ -127,6 +127,12 @@ class Board:
 
         return False
 
+    def print(self):
+        for index, c in enumerate(self.cards):
+            end = " " if (index - 2) % 3 != 0 else "\n"
+            print('({:2n}) {:<33}'.format(index+1, str(c)), end=end)
+
+
 class Player:
 
     def __init__(self):
@@ -166,14 +172,9 @@ class Game:
 
         self.help()
 
-        while True:
+        while len(self.cards) > 0 or self.board.hasSet():
 
-            for index, c in enumerate(self.board.cards):
-                end = " " if (index - 2) % 3 != 0 else "\n"
-                print('({:2n}) {:<33}'.format(index+1, str(c)), end=end)
-
-            # Multiplex on input from players
-            # but for now, hard code to one player on term
+            self.board.print()
 
             v = input("Find a set (or ?, h, n, q): ")
             
@@ -197,7 +198,7 @@ class Game:
                 if self.board.hasSet():
                     print("Wrong, there is a SET!")
                 else:
-                    print("No SET!")
+                    print("Right, there is No SET!")
                     self.board.placeCard(self.cards.pop())
                     self.board.placeCard(self.cards.pop())
                     self.board.placeCard(self.cards.pop())
