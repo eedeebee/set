@@ -37,7 +37,6 @@
         </defs>
     </svg>
 
-    <script src="bower_components/d3/d3.min.js"></script>
     <script>
 
         /**
@@ -84,7 +83,7 @@
                                 num: Numbers[n],
                                 fill: Fills[f],
                                 color: Colors[c],
-                                shapes: Shapes[s]
+                                shape: Shapes[s]
                             });
                         }
                     }
@@ -93,11 +92,105 @@
             shuffleArray(deck);
         };
 
+        function cardToS1x(c) {
+            switch(c.num) {
+                case 1: return 72;
+                case 2: return 47;
+                case 3: return 22;
+            }
+        }
+        function cardToS2x(c) {
+            switch(c.num) {
+                case 1: return 72;
+                case 2: return 97;
+                case 3: return 72;
+            }
+        }
+        function cardToS3x(c) {
+            switch(c.num) {
+                case 1: return 72;
+                case 2: return 97;
+                case 3: return 122;
+            }
+        }
+
+        function cardToCSSClass(c) {
+            return "card " + c.color + " " + c.fill;
+        }
+
+        function cardToFillStyleAttr(c) {
+            if (c.fill == 'lines') 
+                return "fill:url('#lines')";
+            else
+                return "";
+        }
+
+        function cardToText(c) {
+            return  c.num + ' ' + 
+                    c.fill + ' ' + 
+                    c.color + ' ' + 
+                    c.shape;
+        }
+
         var cardsPerRow = 3;
 
-        function drawNextCard() {
-
+        function nextCardFromDeck() {
+            board.push(deck.pop());
         };
+
+        
+        function update() {
+
+            var d = d3.select('.container').selectAll("div.cell")
+                .data(board);
+
+            var c = d.enter().insert("div").attr("class", "cell").insert("svg")
+                .attr("opacity", 0)
+                .attr("class", function(d) { return cardToCSSClass(d); });
+
+            c.transition().duration(750).style("opacity", 1); 
+
+                c.insert("pattern").attr("id", "lines").attr("patternUnits", "userSpaceOnUse")
+                    .attr('x', '0').attr('y', '0').attr('width', '5').attr('height', '5')
+                    .insert('use').attr('xlink:href', '#line-1');
+
+                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;})
+                    .attr('x', function(d) { return cardToS1x(d);} )
+                    .attr('style', function(d) { return cardToFillStyleAttr(d); } );
+                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;})
+                    .attr('x', function(d) { return cardToS2x(d);} )
+                    .attr('style', function(d) { return cardToFillStyleAttr(d); } );
+                c.append("use").attr("xlink:href", function(d) { return "#" + d.shape;})
+                    .attr('x', function(d) { return cardToS3x(d);} )
+                    .attr('style', function(d) { return cardToFillStyleAttr(d); } );
+
+            d.exit().transition()
+                .duration(750)
+                .style("opacity", 0)
+                .remove();
+
+        }
+
+        function doClear() {
+            board = [];
+            update();
+        }
+
+        function threeMore() {
+            for (var i = 0; i < 3; i++) {
+                nextCardFromDeck();
+            }
+            update();
+        }
+
+        function doit() {
+            for (var i = 0; i < 4; i++) {
+                threeMore();
+            }
+        }
+
+        deal();
+
 
     </script>
     
@@ -105,181 +198,24 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Set</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
     <div class="container">
-      <div class="starter-template">
-        <h1>SET</h1>
-        <!-- <p class="lead">Give it a try!<br></p> -->
-      </div>
-      <div class="row" id="row-1">
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card red solid">
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="47" xlink:href="#oval" style="fill:url(#lines)"/>
-                <use x="97" xlink:href="#oval"/>
-            </svg>
-        </div></div>
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card red empty"> 
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="22" xlink:href="#oval" style="fill:url(#lines)"/>
-                <use x="72" xlink:href="#oval" />
-                <use x="122" xlink:href="#oval"/>
-            </svg>
-        </div></div>
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card red solid" >
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="72" xlink:href="#oval"/>
-            </svg>
-        </div></div>
-      </div>
-      <div class="row" id="row-2">
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card purple solid">
-                    <pattern id="plines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="22" xlink:href="#diamond" style="fill:url(#plines);" />
-                <use x="72" xlink:href="#diamond" style="fill:url(#plines);" />
-                <use x="122" xlink:href="#diamond" style="fill:url(#plines);" />
-            </svg>
-        </div></div>
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card purple solid">
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="72" xlink:href="#diamond"/>
-            </svg>
-        </div></div>
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card purple solid">
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="47" xlink:href="#diamond"/>
-                <use x="97" xlink:href="#diamond"/>
-            </svg>
-        </div></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card green solid">
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="22" xlink:href="#diamond"/>
-                <use x="72" xlink:href="#diamond"/>
-                <use x="122" xlink:href="#diamond"/>
-            </svg>
-        </div></div>
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card green empty">
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="72" xlink:href="#diamond"/>
-            </svg>
-        </div></div>
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card green solid">
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="47" xlink:href="#diamond"/>
-                <use x="97" xlink:href="#diamond"/>
-            </svg>
+    <hr/>
 
-        </div></div>
-      </div>
-      <div class="row" id="row-3">
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card red solid">
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="72" xlink:href="#squiggle"/>
-            </svg>
-        </div></div>
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card purple empty">
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="22" xlink:href="#squiggle"/>
-                <use x="72" xlink:href="#squiggle"/>
-                <use x="122" xlink:href="#squiggle"/>
-            </svg>
-        </div></div>
-        <div class="col-xs-6 col-sm-4"><div class="cell">
-            <svg class="card green empty">
-                    <pattern id="lines" patternUnits="userSpaceOnUse"
-                          x="0" y="0" width="5" height="5">
-                        <use xlink:href="#line-1"/>
-                    </pattern>
-                <use x="47" xlink:href="#squiggle"/>
-                <use x="97" xlink:href="#squiggle"/>
-            </svg>
-        </div></div>
-      </div>
       <div class="row"/>
         <div class="col-xs-6 col-sm-4">
-            <div class="cell">
-                <button onclick="hint()">Hint</button>
-            </div>
+                <button onclick="doit()">Doit</button>
         </div>
         <div class="col-xs-6 col-sm-4">
-            <div class="cell">
-                <button onclick="deal()">Deal</button>
-            </div>
+                <button onclick="threeMore()">Three More</button>
         </div>
         <div class="col-xs-6 col-sm-4">
-            <div class="cell">
-                <button onclick="noSet()">No set</button>
-            </div>
+                <button onclick="doClear()">Clear</button>
         </div>
       </div>
     </div>
-    <hr/>
+
     <script src="jquery/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bower_components/d3/d3.min.js"></script>
   </body>
 </html>
