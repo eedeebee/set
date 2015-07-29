@@ -39,20 +39,6 @@
 
     <script>
 
-        /**
-         * Randomize array element order in-place.
-         * Using Fisher-Yates shuffle algorithm.
-         */
-        function shuffleArray(array) {
-            for (var i = array.length - 1; i > 0; i--) {
-                var j = Math.floor(Math.random() * (i + 1));
-                var temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-            }
-            return array;
-        }
-
         var Numbers = [1, 2, 3];
         var Colors  = ['red', 'green', 'purple'];
         var Shapes  = ['oval', 'diamond', 'squiggle'];
@@ -116,7 +102,7 @@
                     }
                 }
             }
-            shuffleArray(deck);
+            d3.shuffle(deck);
         };
 
         function cardToS1x(c) {
@@ -145,9 +131,9 @@
             return "card " + c.color + " " + c.fill;
         }
 
-        function cardToFillStyleAttr(c) {
+        function cardToFillStyleAttr(c, i, j) {
             if (c.fill == 'lines') 
-                return "fill:url('#lines')";
+                return "fill:url('#lines-" + j + '-' + i + "')";
             else
                 return "";
         }
@@ -199,9 +185,12 @@
                     .attr('height', 40)
                 ;
 
-                c.insert('pattern').attr('id', 'lines').attr('patternUnits', 'userSpaceOnUse')
+                c.insert('pattern')
+                    .attr('patternUnits', 'userSpaceOnUse')
                     .attr('x', '0').attr('y', '0').attr('width', '5').attr('height', '5')
-                    .insert('use').attr('xlink:href', '#line-1')
+                    .insert('use')
+                        .attr('xlink:href', '#line-1')
+                    
                 ;
 
                 c.insert('use').attr('class', 's1');
@@ -210,24 +199,20 @@
 
             c.transition().duration(750).style('opacity', 1); 
 
-            //d.selectAll('svg').data(function(d, i) { return d; })
-                //.attr('class', function(d) { return cardToCSSClass(d); })
-                //.on('click', function(d, i) { 
-                    //this.classList.toggle('selected'); 
-                    //console.log(cardToText(d) + ' ' + this.classList.contains('selected'));
-                //});
+            d3.selectAll('.row').selectAll('pattern')
+                .attr('id', function(d, i, j) { return 'lines-'+j+'-'+i; })
 
             d.selectAll('use.s1')
                 .attr('xlink:href', function(d) { return '#' + d.shape;})
-                .attr('style', function(d) { return cardToFillStyleAttr(d); } )
+                .attr('style', function(d, i, j) { return cardToFillStyleAttr(d, i, j); } )
                 .attr('x', function(d) { return cardToS1x(d);} );
             d.selectAll('use.s2')
                 .attr('xlink:href', function(d) { return '#' + d.shape;})
-                .attr('style', function(d) { return cardToFillStyleAttr(d); } )
+                .attr('style', function(d, i, j) { return cardToFillStyleAttr(d, i, j); } )
                 .attr('x', function(d) { return cardToS2x(d);} );
             d.selectAll('use.s3')
                 .attr('xlink:href', function(d) { return '#' + d.shape;})
-                .attr('style', function(d) { return cardToFillStyleAttr(d); } )
+                .attr('style', function(d, i, j) { return cardToFillStyleAttr(d, i, j); } )
                 .attr('x', function(d) { return cardToS3x(d);} );
 
             //r.exit().transition()
@@ -295,11 +280,13 @@
         }
 
         function redeal() {
-            deck = [];
-            deal();
             board = [];
             update();
-            doit();
+            deck = [];
+            deal();
+            for (var i = 0; i < 4; i++) {
+                addRow();
+            }
         }
 
         function removeTopRow() {
@@ -318,13 +305,12 @@
         }
 
         function doit() {
+            deal();
 
             for (var i = 0; i < 4; i++) {
                 addRow();
             }
         }
-
-        deal();
 
     </script>
     
