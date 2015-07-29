@@ -60,13 +60,40 @@
             
         function isSet(a, b, c) {
 
-            numberOK =  ((a.num == b.num == c.num) || (a.num != b.num && b.num != c.num && a.num != c.num))
-            fillOK =  ((a.fill == b.fill == c.fill) || (a.fill != b.fill && b.fill != c.fill && a.fill != c.fill))
-            colorOK =  ((a.color == b.color == c.color) || (a.color != b.color && b.color != c.color && a.color != c.color))
-            shapeOK =  ((a.shape == b.shape == c.shape) || (a.shape != b.shape && b.shape != c.shape && a.shape != c.shape))
+            numberOK =  ((a.num == b.num && b.num == c.num) || (a.num != b.num && b.num != c.num && a.num != c.num))
+            console.log(numberOK);
+            fillOK =  ((a.fill == b.fill && b.fill == c.fill) || (a.fill != b.fill && b.fill != c.fill && a.fill != c.fill))
+            console.log(fillOK);
+            colorOK =  ((a.color == b.color && b.color == c.color) || (a.color != b.color && b.color != c.color && a.color != c.color))
+            console.log(colorOK);
+            shapeOK =  ((a.shape == b.shape && b.shape == c.shape) || (a.shape != b.shape && b.shape != c.shape && a.shape != c.shape))
+            console.log(shapeOK);
 
             return colorOK && fillOK && shapeOK && numberOK
 
+        }
+
+        function hasSet() {
+
+            var cards = [];
+            for (var c = 0; c < board.length; c++) {
+                for (card in board[c]) {
+                    cards.push(card);
+                }
+            }
+
+            var N = board.length * 3;
+            for (var i = 0; i < N - 2; i++) {
+                for (var j = 0; j < N - 1; j++) {
+                    for (var k = 0; k < N; j++) {
+                        if (isSet(cards[i], cards[j], cards[k])) {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            return false;
         }
 
         var deck = [];
@@ -134,66 +161,132 @@
 
         var cardsPerRow = 3;
 
-        function nextCardFromDeck() {
-            board.push(deck.pop());
-        };
-
-        function rows(ar) {
-            var r = [];
-            var a = [];
-            for (var i = 0; i < ar.length; i++) {
-                r.push(ar[i])
-                if (i % 3 == 2) {
-                    a.push(r);
-                    r = [];
-                }
-            }
-            if (r.length > 0) {
-                a.push(r);
-            }
-            return a;
-        }
-
-        
         function update() {
 
-            var d = d3.select('.container').selectAll('.row').data(rows(board));
-
-            var r = d.enter().insert('div').attr('class', 'row').selectAll('.cell').data(function(d, i) { return d; });
-
-            var c = r.enter()
-                .insert('div').attr('class', 'col-xs-6 col-sm-4')
-                .insert('div').attr('class', 'cell')
-                .insert('svg')
-                    .attr('opacity', 0)
-                    .attr('class', function(d) { return cardToCSSClass(d); });
-
-            c.transition().duration(750).style('opacity', 1); 
-
-                c.insert('pattern').attr('id', 'lines').attr('patternUnits', 'userSpaceOnUse')
-                    .attr('x', '0').attr('y', '0').attr('width', '5').attr('height', '5')
-                    .insert('use').attr('xlink:href', '#line-1');
-
-                c.append('use').attr('xlink:href', function(d) { return '#' + d.shape;})
-                    .attr('x', function(d) { return cardToS1x(d);} )
-                    .attr('style', function(d) { return cardToFillStyleAttr(d); } );
-                c.append('use').attr('xlink:href', function(d) { return '#' + d.shape;})
-                    .attr('x', function(d) { return cardToS2x(d);} )
-                    .attr('style', function(d) { return cardToFillStyleAttr(d); } );
-                c.append('use').attr('xlink:href', function(d) { return '#' + d.shape;})
-                    .attr('x', function(d) { return cardToS3x(d);} )
-                    .attr('style', function(d) { return cardToFillStyleAttr(d); } );
-
-            r.exit().transition()
-                .duration(750)
-                .style('opacity', 0)
-                .remove();
+            var d = d3.selectAll('.row').data(board);
 
             d.exit().transition()
                 .duration(750)
                 .style('opacity', 0)
                 .remove();
 
+            var row = d.enter()
+                .insert('div').attr('class', 'row')
+                .selectAll('.card')
+                .data(function(d, i) { return d; })
+                .attr('class', function(d) { return cardToCSSClass(d); })
+                .on('click', function(d, i) { 
+                    this.classList.toggle('selected'); 
+                    console.log(cardToText(d) + ' ' + this.classList.contains('selected'));
+                });
+
+            var c = row.enter()
+                .insert('div').attr('class', 'col-xs-6 col-sm-4')
+                .insert('div').attr('class', 'cell')
+                .insert('svg').style('opacity', 0)
+                    .attr('class', function(d) { return cardToCSSClass(d); })
+                    .on('click', function(d, i) { 
+                        this.classList.toggle('selected'); 
+                        console.log(cardToText(d) + ' ' + this.classList.contains('selected'));
+                    })
+                ;
+
+                c.insert('text').text(function(d) { return cardToText(d); })
+                    .attr('x', 10)
+                    .attr('y', 10)
+                    .attr('x', 10)
+                    .attr('width', 100)
+                    .attr('height', 40)
+                ;
+
+                c.insert('pattern').attr('id', 'lines').attr('patternUnits', 'userSpaceOnUse')
+                    .attr('x', '0').attr('y', '0').attr('width', '5').attr('height', '5')
+                    .insert('use').attr('xlink:href', '#line-1')
+                ;
+
+                c.insert('use').attr('class', 's1');
+                c.insert('use').attr('class', 's2');
+                c.insert('use').attr('class', 's3');
+
+            c.transition().duration(750).style('opacity', 1); 
+
+            //d.selectAll('svg').data(function(d, i) { return d; })
+                //.attr('class', function(d) { return cardToCSSClass(d); })
+                //.on('click', function(d, i) { 
+                    //this.classList.toggle('selected'); 
+                    //console.log(cardToText(d) + ' ' + this.classList.contains('selected'));
+                //});
+
+            d.selectAll('use.s1')
+                .attr('xlink:href', function(d) { return '#' + d.shape;})
+                .attr('style', function(d) { return cardToFillStyleAttr(d); } )
+                .attr('x', function(d) { return cardToS1x(d);} );
+            d.selectAll('use.s2')
+                .attr('xlink:href', function(d) { return '#' + d.shape;})
+                .attr('style', function(d) { return cardToFillStyleAttr(d); } )
+                .attr('x', function(d) { return cardToS2x(d);} );
+            d.selectAll('use.s3')
+                .attr('xlink:href', function(d) { return '#' + d.shape;})
+                .attr('style', function(d) { return cardToFillStyleAttr(d); } )
+                .attr('x', function(d) { return cardToS3x(d);} );
+
+            //r.exit().transition()
+                //.duration(6750)
+                //.style('opacity', 0)
+                //.remove();
+
+
+        }
+
+        function noSet() {
+            if (hasSet()) {
+                alert("There is a set!");
+            } else {
+                addRow();
+            }
+        }
+
+        function set() {
+            var s = d3.selectAll('.card.selected').data();
+            if (s.length != 3) {
+                alert("Choose 3 cards");
+                return false;
+            }
+
+            if (isSet(s[0], s[1], s[2])) {
+                alert('Set!');
+
+                // Remove cards
+                d3.selectAll('.card.selected').each(function(d, i) {
+
+                    var ct = cardToText(d);
+                    console.log("remove " + ct + " index " + i);
+                    
+                    for (var r = 0; r < board.length; r++) {
+                        row = board[r];
+                        for (var c = 0; c < row.length; c++) {
+                            if (cardToText(row[c]) == ct)  {
+                                console.log("removed " + ct);
+                                board[r] = row = row.splice(i, 1);
+                                for (var k = 0; k < row.length; k++) {
+                                    console.log("remaining row " + cardToText(row[k]));
+                                }
+                                break;
+                            }
+                        }
+                    }
+
+                    d3.select(this.parentElement.parentElement)
+                        .transition()
+                        .duration(750)
+                        .style('opacity', 0)
+                        .remove();
+                });
+
+            }
+            else {
+                alert('Nope!');
+            }
         }
 
         function doClear() {
@@ -201,33 +294,75 @@
             update();
         }
 
-        function threeMore() {
+        function redeal() {
+            deck = [];
+            deal();
+            board = [];
+            update();
+            doit();
+        }
+
+        function removeTopRow() {
+            board = board.splice(0, 1);
+            update();
+        }
+
+        function addRow() {
+            var r = [];
             for (var i = 0; i < 3; i++) {
-                nextCardFromDeck();
+                // TODO: handle end of game
+                r.push(deck.pop());
             }
+            board.push(r);
             update();
         }
 
         function doit() {
+
             for (var i = 0; i < 4; i++) {
-                threeMore();
+                addRow();
             }
         }
 
         deal();
 
-
     </script>
     
   </head>
 
-  <body>
+  <body onload="doit()">
 
-                <button onclick="doit()">Doit</button>
-                <button onclick="threeMore()">Three More</button>
-                <button onclick="doClear()">Clear</button>
     <div class="container">
-    <hr/>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Set</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="javascript:doit()">Deal 12</a></li>
+            <li><a href="javascript:doClear()">Clear</a></li>
+            <li><a href="javascript:redeal()">Redeal</a></li>
+            <li><a href="javascript:addRow()">Add Row</a></li>
+            <li><a href="javascript:removeTopRow()">Remove top row</a></li>
+            <li><a href="javascript:noSet()">No Set</a></li>
+            <li><a href="javascript:set()">Set</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+      <div class="starter-template">
+        <h1>SET</h1>
+        <!-- <p class="lead">Give it a try!<br></p> -->
     </div>
 
     <script src="jquery/jquery.min.js"></script>

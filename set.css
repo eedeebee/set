@@ -11,6 +11,10 @@ body {
     stroke-width: 1;
 }
 
+text {
+  font: bold 12px monospace;
+}
+
 #lines {
     patternUnits: userSpaceOnUse;
     x: 0;
@@ -30,6 +34,16 @@ body {
     margin-right: auto;
 }
 
+.cell:hover {
+    cursor: pointer;
+    x-ms-transform: rotate(-2deg); /* IE 9 */
+    x-webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
+    xtransform: rotate(-2deg);
+    xbox-shadow: 5px 5px 5px #aaa;
+    x-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+    xbox-shadow: 0 2px 2px 0 #C2C2C2;
+}
+
 .card {
     font-size: 20px;
     border-radius: 10px; 
@@ -39,6 +53,13 @@ body {
     stroke-width: 1;
     background-color: #eee;
 }
+
+.selected {
+    -moz-box-shadow:    inset 0 0 10px #444;
+    -webkit-box-shadow: inset 0 0 10px #444;
+    box-shadow:         inset 0 0 10px #444;
+}
+
 
 .empty {
     fill: none;
