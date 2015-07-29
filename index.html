@@ -177,13 +177,15 @@
                     })
                 ;
 
-                c.insert('text').text(function(d) { return cardToText(d); })
-                    .attr('x', 10)
-                    .attr('y', 10)
-                    .attr('x', 10)
-                    .attr('width', 100)
-                    .attr('height', 40)
-                ;
+                if (0) {
+                    c.insert('text').text(function(d) { return cardToText(d); })
+                        .attr('x', 10)
+                        .attr('y', 10)
+                        .attr('x', 10)
+                        .attr('width', 100)
+                        .attr('height', 40)
+                    ;
+                }
 
                 c.insert('pattern')
                     .attr('patternUnits', 'userSpaceOnUse')
