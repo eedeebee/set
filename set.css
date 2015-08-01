@@ -12,7 +12,7 @@ body {
 }
 
 text {
-  font: bold 12px monospace;
+  font: normal 12px arial;
 }
 
 #lines {
@@ -27,21 +27,8 @@ text {
     padding-bottom: 10px;
 }
 
-.cell {
-    height: 100px; 
-    width: 180px; 
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cell:hover {
-    cursor: pointer;
-    x-ms-transform: rotate(-2deg); /* IE 9 */
-    x-webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
-    xtransform: rotate(-2deg);
-    xbox-shadow: 5px 5px 5px #aaa;
-    x-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
-    xbox-shadow: 0 2px 2px 0 #C2C2C2;
+.spot {
+    text-align:center;
 }
 
 .card {
@@ -52,6 +39,18 @@ text {
     height: 100px;
     stroke-width: 1;
     background-color: #eee;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card:hover {
+    cursor: pointer;
+    x-ms-transform: rotate(-2deg); /* IE 9 */
+    x-webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
+    xtransform: rotate(-2deg);
+    xbox-shadow: 5px 5px 5px #aaa;
+    x-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+    xbox-shadow: 0 2px 2px 0 #C2C2C2;
 }
 
 .selected {
@@ -85,8 +84,4 @@ text {
 
 .red {
     stroke: red;
-}
-
-.one_of_one {
-    x: 72;
 }
