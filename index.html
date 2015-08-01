@@ -244,7 +244,7 @@
                     console.log(cardToText(d) + ' ' + this.classList.contains('selected'));
                 });
 
-            svg.transition().duration(750).style('opacity', 1); 
+            svg.transition().delay(750).duration(750).style('opacity', 1); 
 
             svg.append('text')
                 .attr('class', 'debug-text')
@@ -273,7 +273,7 @@
                     console.log(cardToText(d) + ' ' + this.classList.contains('selected'));
                 });
 
-            upd.selectAll('.debug-text').text(function(d) { return cardToText(d); });
+            //upd.selectAll('.debug-text').text(function(d) { return cardToText(d); });
 
             d3.selectAll('.row').selectAll('pattern')
                 //.attr('id', function(d, i, j) { return 'lines-'+ j +'-' + i; })
