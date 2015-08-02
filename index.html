@@ -141,9 +141,8 @@
             return "card " + c.color + " " + c.fill;
         }
 
-        function cardToFillStyleAttr(c, i, j) {
+        function cardToFillStyleAttr(c) {
             if (c.fill == 'lines') {
-                //return "fill:url('#lines-" + j + '-' + i + "')";
                 return "fill:url('#lines-" + c.color + "')";
             }
             else {
@@ -244,7 +243,7 @@
                     console.log(cardToText(d) + ' ' + this.classList.contains('selected'));
                 });
 
-            svg.transition().delay(750).duration(750).style('opacity', 1); 
+            svg.transition().duration(750).style('opacity', 1); 
 
             svg.append('text')
                 .attr('class', 'debug-text')
@@ -264,7 +263,6 @@
             svg.append('use').attr('class', 's2');
             svg.insert('use').attr('class', 's3');
 
-
             upd.select('svg')
                 .attr('id', function(d) { return cardToID(d); })
                 .attr('class', function(d) { return cardToCSSClass(d); })
@@ -276,20 +274,19 @@
             //upd.selectAll('.debug-text').text(function(d) { return cardToText(d); });
 
             d3.selectAll('.row').selectAll('pattern')
-                //.attr('id', function(d, i, j) { return 'lines-'+ j +'-' + i; })
-                .attr('id', function(d, i, j) { return 'lines-' + d.color; })
+                .attr('id', function(d) { return 'lines-' + d.color; })
 
             row.selectAll('use.s1')
                 .attr('xlink:href', function(d) { return '#' + d.shape;})
-                .attr('style', function(d, i, j) { return cardToFillStyleAttr(d, i, j); } )
+                .attr('style', function(d) { return cardToFillStyleAttr(d); } )
                 .attr('x', function(d) { return cardToS1x(d);} );
             row.selectAll('use.s2')
                 .attr('xlink:href', function(d) { return '#' + d.shape;})
-                .attr('style', function(d, i, j) { return cardToFillStyleAttr(d, i, j); } )
+                .attr('style', function(d) { return cardToFillStyleAttr(d); } )
                 .attr('x', function(d) { return cardToS2x(d);} );
             row.selectAll('use.s3')
                 .attr('xlink:href', function(d) { return '#' + d.shape;})
-                .attr('style', function(d, i, j) { return cardToFillStyleAttr(d, i, j); } )
+                .attr('style', function(d) { return cardToFillStyleAttr(d); } )
                 .attr('x', function(d) { return cardToS3x(d);} );
 
         }
