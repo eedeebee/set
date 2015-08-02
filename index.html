@@ -157,16 +157,9 @@
                     c.shape;
         }
 
-        function cardToID(c) {
-            return  'card-' + c.num + '-' + 
-                    c.fill + '-' + 
-                    c.color + '-' + 
-                    c.shape;
-        }
-
         function update() {
 
-            var row = d3.selectAll('.row').data(board, function(d, i) { 
+            var row = d3.selectAll('.row').data(board, function(d) { 
                 var r = "";
                 for (var j = 0; j < d.length; j++) {
                     r += cardToText(d[j]) + " ";
@@ -174,15 +167,15 @@
                 return r;
             });
 
-            row.exit().transition()
-                .duration(750)
+            row.exit()
+                .transition().duration(750)
                 .style('opacity', 0)
                 .remove();
 
             var card = row.enter()
                 .append('div').attr('class', 'row')
                 .selectAll('.spot')
-                .data(function(d, i) { return d; }, function(d) {
+                .data(function(d) { return d; }, function(d) {
                     return cardToText(d);
                 })
 
@@ -196,9 +189,8 @@
                 .style('opacity', 1); 
 
             var svg = c.append('svg')
-                .attr('id', function(d) { return cardToID(d); })
                 .attr('class', function(d) { return cardToCSSClass(d); })
-                .on('click', function(d, i) { 
+                .on('click', function(d) { 
                     this.classList.toggle('selected'); 
                     console.log(cardToText(d) + ' ' + this.classList.contains('selected'));
                 });
@@ -222,7 +214,7 @@
             svg.insert('use').attr('class', 's3');
 
             var upd = row.selectAll('.spot')
-                .data(function(d, i) { return d; }, function(d) {
+                .data(function(d) { return d; }, function(d) {
                     return cardToText(d);
                 })
 
@@ -234,14 +226,8 @@
             svg = upd.enter()
                 .append('div')
                     .attr('class', 'spot col-xs-6 col-sm-4')
-                .append('svg')
-                .style('opacity', 0)
-                .attr('id', function(d) { return cardToID(d); })
-                .attr('class', function(d) { return cardToCSSClass(d); })
-                .on('click', function(d, i) { 
-                    this.classList.toggle('selected'); 
-                    console.log(cardToText(d) + ' ' + this.classList.contains('selected'));
-                });
+                    .append('svg')
+                        .style('opacity', 0)
 
             svg.transition().duration(750).style('opacity', 1); 
 
@@ -264,9 +250,8 @@
             svg.insert('use').attr('class', 's3');
 
             upd.select('svg')
-                .attr('id', function(d) { return cardToID(d); })
                 .attr('class', function(d) { return cardToCSSClass(d); })
-                .on('click', function(d, i) { 
+                .on('click', function(d) { 
                     this.classList.toggle('selected'); 
                     console.log(cardToText(d) + ' ' + this.classList.contains('selected'));
                 });
@@ -309,7 +294,7 @@
             if (isSet(s[0], s[1], s[2])) {
                 alert('Set!');
 
-                // Remove cards
+                // Replace these cards
                 d3.selectAll('.card.selected').each(function(d, i) {
 
                     var ct = cardToText(d);
