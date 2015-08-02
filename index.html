@@ -73,15 +73,16 @@
 
             var cards = [];
             for (var c = 0; c < board.length; c++) {
-                for (card in board[c]) {
-                    cards.push(card);
+                var r = board[c];
+                for (var d = 0; d < 3; d++) {
+                    cards.push(r[d]);
                 }
             }
 
             var N = board.length * 3;
             for (var i = 0; i < N - 2; i++) {
                 for (var j = 1; j < N - 1; j++) {
-                    for (var k = 2; k < N; j++) {
+                    for (var k = 2; k < N; k++) {
                         if (isSet(cards[i], cards[j], cards[k])) {
                             return [cards[i], cards[j], cards[k]];
                         }
