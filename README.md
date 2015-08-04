@@ -21,7 +21,8 @@ For the web app
 
 
 
-# Logic
+# Preliminary design thoughts
+## Logic
 
 1. Start a game
 - Shuffle cards
@@ -37,9 +38,9 @@ For the web app
 		- If no more cards, end game.
 	- If there is a set, say no. 
 
-# Objects
+## Objects
 
-## Game
+### Game
 
 - Functions
 	- start
@@ -50,14 +51,14 @@ For the web app
 	- board
 	- players
 
-## Card
+### Card
 
 - Shape
 - Color
 - Number
 - Fill
 
-## Board
+### Board
 
 - Functions
 	- placeCard
@@ -69,7 +70,7 @@ For the web app
     - Cards
 
 
-## Player
+### Player
 
 - Function
 	- loseSet
