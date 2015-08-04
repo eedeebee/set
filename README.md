@@ -10,11 +10,16 @@ There are two versions so far.
 For the python command line:
 
     % pip3 install termcolor
+    % python3 set.py
 
-For the JS
+For the web app
 
     % npm install -g jspm
-    % jspm 
+    % jspm update
+    % python3 http.server
+    % open http://localhost:8000/index.html
+
+
 
 # Logic
 
