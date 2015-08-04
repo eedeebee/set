@@ -1,6 +1,20 @@
+# SET
+
+There are two versions so far.  
+
+- A command line engine written in python
+- A web page written using ES6, using svg and D3.
+
 # Pre-requisites
 
+For the python command line:
+
     % pip3 install termcolor
+
+For the JS
+
+    % npm install -g jspm
+    % jspm 
 
 # Logic
 
