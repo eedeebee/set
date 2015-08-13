@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="eric.bloch+set@gmail.com">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Set</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="set.css" rel="stylesheet">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <defs>
+            <g id="diamond">
+                <polygon stroke="inherit" fill="inherit" points="18,10 36,50 18,90 0,50" />
+            </g>
+            <g id="squiggle">
+                <rect stroke="inherit" fill="inherit" x="0" y="15" width="36" height="66" />
+            </g>
+            <g id="oval">
+                <path d="M 36 30 
+                         A 18 18 180 0 0 0 30 
+                         L 0 66
+                         A 18 18 180 0 0 36 66
+                         L 36 30 " /> 
+    
+            </g>
+            <g id="line-1">
+                <g class="line-pattern">
+                    <path d="M0,0 l5,5"/>
+                </g>
+            </g>
+        </defs>
+    </svg>
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+       System.import('lib/main');
+    </script>
+    
+  </head>
+
+  <body>
+    <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Set</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a id="clear" href="#">Clear</a></li>
+            <li><a id="redeal" href="#">Redeal</a></li>
+            <li><a id="addrow" href="#)">Add Row</a></li>
+            <li><a id="removetoprow" href="#">Remove top row</a></li>
+            <li><a id="noset" href="#">No Set</a></li>
+            <li><a id="set" href="#">Set</a></li>
+            <li><a id="hint" href="#">Hint</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="starter-template">
+        <h1>SET</h1>
+        <!-- <p class="lead">Give it a try!<br></p> -->
+        <div id="board">
+<!--
+            <svg class="card green empty">
+                <text class="debug-text" x="10" y="10" stroke="black" fill="black"></text>
+                <pattern patternUnits="userSpaceOnUse" x="0" y="0" width="5" height="5" id="lines-green">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#line-1"></use>
+                </pattern>
+                <use class="s1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#diamond" style="" x="47"></use>
+                <use class="s2" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#diamond" style="" x="97"></use>
+                <use class="s3" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#diamond" style="" x="97"></use>
+            </svg>
+-->
+         </div> 
+    </div>
+    </div>
+  </body>
+</html>
