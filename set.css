@@ -2,7 +2,7 @@ body {
   padding-top: 50px;
 }
 .starter-template {
-  padding: 40px 15px;
+  padding: 30px 15px;
   text-align: center;
 }
 
@@ -13,6 +13,10 @@ body {
 
 text {
   font: normal 12px arial;
+}
+
+h1 {
+    margin-bottom: 20px;
 }
 
 #lines {
@@ -82,4 +86,11 @@ text {
 
 .red {
     stroke: red;
+}
+
+#error, #message {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
 }

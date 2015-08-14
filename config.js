@@ -13,6 +13,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.5",
     "components/jquery": "github:components/jquery@2.1.4",
     "d3": "github:mbostock/d3@3.5.6",
+    "firebase": "github:firebase/firebase-bower@2.2.9",
     "jquery": "github:components/jquery@2.1.4",
     "lodash-node": "npm:lodash-node@3.10.0",
     "myname": "npm:underscore@1.8.3",
