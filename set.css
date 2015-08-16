@@ -39,21 +39,31 @@ h1 {
     height: 100px;
     stroke-width: 1;
     background-color: #eee;
-    xmargin-left: auto;
-    xmargin-right: auto;
     text-align:center;
     margin: 10px 60px 10px 60px;
 }
 
+.small {
+    margin: 10px 10px 10px 10px; 
+    transform: scale(.4); 
+}
+
 .card:hover {
     cursor: pointer;
-    -ms-transform: scale(1.05);
-    -webkit-transform: scale(1.01);
-    transform: scale(1.01);
+    -ms-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+.small:hover {
+    cursor: auto; 
+    -ms-transform: scale(.4); 
+    -webkit-transform: scale(.4); 
+    transform: scale(.4); 
 }
 
 .selected {
-    box-shadow:         inset 0 0 10px #444;
+    box-shadow: inset 0 0 10px #444;
 }
 
 

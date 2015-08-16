@@ -19,6 +19,7 @@ System.config({
     "myname": "npm:underscore@1.8.3",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
+    "underscore": "npm:underscore@1.8.3",
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
     },
