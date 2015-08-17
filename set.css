@@ -44,8 +44,9 @@ h1 {
 }
 
 .small {
-    margin: 10px 10px 10px 10px; 
-    transform: scale(.4); 
+    margin: 20px 10px 0px 10px;
+    width:  90px;
+    height: 50px;
 }
 
 .card:hover {
@@ -57,9 +58,6 @@ h1 {
 
 .small:hover {
     cursor: auto; 
-    -ms-transform: scale(.4); 
-    -webkit-transform: scale(.4); 
-    transform: scale(.4); 
 }
 
 .selected {
@@ -98,4 +96,12 @@ h1 {
     position: fixed;
     top: 0px;
     left: 0px;
+}
+
+#last-set {
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 160px;
 }
