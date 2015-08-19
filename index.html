@@ -62,11 +62,11 @@
 
   </head>
 
-  <body>
+  <body ng-controller="game as game" ng-keypress="game.keyPress($event)" tabindex="0">
     <div class="container">
     <div class="starter-template">
       <div id="error" style="display: none" class="alert alert-warning alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" ng-click="game.dismissError()" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <span class="msg"/>
       </div>
       <div id="message" style="display: none" class="alert alert-info alert-dismissible" role="alert">
@@ -78,14 +78,13 @@
       <div id="last-set">
         <h4>Set</h4>
       </div>
-      <div>Hi Anonymous, please tell me your name: <input type="text"/><br/><br/></div> 
       <!-- <h1>SET</h1> -->
       <!-- <p class="lead">Give it a try!<br></p> -->
       <div id="buttons">
-        <button class="btn btn-default btn-lg" id="set" type="button">Set</button> 
-        <button class="btn btn-default btn-lg" id="noset" type="button">No Set</button> 
-        <button class="btn btn-default btn-lg" id="hint" type="button">Hint</button> 
-        <button class="btn btn-default btn-lg" id="newgame" type="button">New Game</button> 
+        <button class="btn btn-default btn-lg" ng-click="game.checkForSet()"  type="button">Set</button> 
+        <button class="btn btn-default btn-lg" ng-click="game.noset()" type="button">No Set</button> 
+        <button class="btn btn-default btn-lg" ng-click="game.hint()" type="button">Hint</button> 
+        <button class="btn btn-default btn-lg" ng-click="game.redeal()" type="button">New Game</button> 
       </div>
       <hr/>
       <div id="board"/>
