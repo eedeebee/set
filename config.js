@@ -10,6 +10,8 @@ System.config({
 
 System.config({
   "map": {
+    "angular": "github:angular/bower-angular@1.4.4",
+    "angularfire": "github:firebase/angularfire@1.1.2",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
     "components/jquery": "github:components/jquery@2.1.4",
     "d3": "github:mbostock/d3@3.5.6",
