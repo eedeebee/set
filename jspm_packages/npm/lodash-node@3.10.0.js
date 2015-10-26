@@ -1,1 +1,0 @@
-module.exports = require("npm:lodash-node@3.10.0/modern/index");
