@@ -14,8 +14,8 @@ For the python command line:
 
 For the web app
 
-    % npm install -g jspm
-    % jspm update
+    % npm install jspm --save-dev
+    % ./node_modules/.bin/jspm update
     % python3 http.server
     % open http://localhost:8000/index.html
 
