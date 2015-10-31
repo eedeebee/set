@@ -1,13 +1,16 @@
 System.config({
-  baseURL: "./",
-  defaultJSExtensions: true,
-  transpiler: "traceur",
-  paths: {
-    "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
+  "baseURL": "./",
+  "transpiler": "traceur",
+  "paths": {
+    "github:*": "jspm_packages/github/*.js",
+    "npm:*": "jspm_packages/npm/*.js",
+    "*": "*.js"
   },
+  "defaultJSExtensions": true
+});
 
-  map: {
+System.config({
+  "map": {
     "angular": "github:angular/bower-angular@1.4.7",
     "angularfire": "npm:angularfire@1.1.3",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
@@ -16,8 +19,8 @@ System.config({
     "firebase": "github:firebase/firebase-bower@2.3.1",
     "jquery": "github:components/jquery@2.1.4",
     "lodash-node": "npm:lodash-node@3.10.1",
-    "traceur": "github:jmcriffey/bower-traceur@0.0.92",
-    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.92",
+    "traceur": "github:jmcriffey/bower-traceur@0.0.88",
+    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
     "underscore": "npm:underscore@1.8.3",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -309,8 +312,10 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "isarray": "npm:isarray@0.0.1",
       "process": "github:jspm/nodelibs-process@0.1.2",
+      "stream": "github:jspm/nodelibs-stream@0.1.0",
       "stream-browserify": "npm:stream-browserify@1.0.0",
-      "string_decoder": "npm:string_decoder@0.10.31"
+      "string_decoder": "npm:string_decoder@0.10.31",
+      "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:ripemd160@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -362,3 +367,4 @@ System.config({
     }
   }
 });
+
