@@ -1,9 +1,9 @@
 /* */ 
 (function(Buffer) {
-  var inherits = require('inherits');
-  var Buffer = require('buffer').Buffer;
-  var asn1 = require('../../asn1');
-  var DERDecoder = require('./der');
+  var inherits = require("inherits");
+  var Buffer = require("buffer").Buffer;
+  var asn1 = require("../../asn1");
+  var DERDecoder = require("./der");
   function PEMDecoder(entity) {
     DERDecoder.call(this, entity);
     this.enc = 'pem';
@@ -41,4 +41,4 @@
     var input = new Buffer(base64, 'base64');
     return DERDecoder.prototype.decode.call(this, input, options);
   };
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

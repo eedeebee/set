@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var isObject = require('../lang/isObject'),
-      isString = require('../lang/isString'),
-      support = require('../support');
+  var isObject = require("../lang/isObject"),
+      isString = require("../lang/isString"),
+      support = require("../support");
   function toObject(value) {
     if (support.unindexedChars && isString(value)) {
       var index = -1,
@@ -16,4 +16,4 @@
     return isObject(value) ? value : Object(value);
   }
   module.exports = toObject;
-})(require('process'));
+})(require("process"));

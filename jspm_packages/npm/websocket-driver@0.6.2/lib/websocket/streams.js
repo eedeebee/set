@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
   'use strict';
-  var Stream = require('stream').Stream,
-      util = require('util');
+  var Stream = require("stream").Stream,
+      util = require("util");
   var IO = function(driver) {
     this.readable = this.writable = true;
     this._paused = false;
@@ -28,7 +28,7 @@
   };
   IO.prototype.end = function(chunk) {
     if (!this.writable)
-      return;
+      return ;
     if (chunk !== undefined)
       this.write(chunk);
     this.writable = false;
@@ -70,4 +70,4 @@
   Messages.prototype.destroy = function() {};
   exports.IO = IO;
   exports.Messages = Messages;
-})(require('process'));
+})(require("process"));

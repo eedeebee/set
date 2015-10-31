@@ -1,9 +1,9 @@
 /* */ 
 (function(Buffer) {
-  var assert = require('assert');
-  var asn1 = require('../lib/asn1');
-  var BN = require('bn.js');
-  var Buffer = require('buffer').Buffer;
+  var assert = require("assert");
+  var asn1 = require("../lib/asn1");
+  var BN = require("bn.js");
+  var Buffer = require("buffer").Buffer;
   describe('asn1.js DER encoder', function() {
     it('should code explicit tag as 0xA2', function() {
       var E = asn1.define('E', function() {
@@ -72,4 +72,4 @@
       this.objid();
     }, '1.2.398.3.10.1.1.1.2.2'.split('.'), '060a2a830e030a0101010202');
   });
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

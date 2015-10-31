@@ -1,6 +1,6 @@
 /* */ 
 'use strict';
-var RingBuffer = require('./ring_buffer');
+var RingBuffer = require("./ring_buffer");
 var Functor = function(session, method) {
   this._session = session;
   this._method = method;
@@ -11,7 +11,7 @@ var Functor = function(session, method) {
 Functor.QUEUE_SIZE = 8;
 Functor.prototype.call = function(error, message, callback, context) {
   if (this._stopped)
-    return;
+    return ;
   var record = {
     error: error,
     message: message,
@@ -29,7 +29,7 @@ Functor.prototype.call = function(error, message, callback, context) {
   }
   this._session[this._method](message, function(err, msg) {
     if (!(called ^ (called = true)))
-      return;
+      return ;
     if (err) {
       self._stop();
       record.error = err;

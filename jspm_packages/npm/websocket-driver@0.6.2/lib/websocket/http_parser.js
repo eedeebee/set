@@ -35,7 +35,7 @@
       self.statusCode = statusCode;
       self.url = pathname;
       if (!headers)
-        return;
+        return ;
       for (var i = 0,
           n = headers.length,
           key,
@@ -83,4 +83,4 @@
       this.body = (consumed < chunk.length) ? chunk.slice(consumed) : new Buffer(0);
   };
   module.exports = HttpParser;
-})(require('buffer').Buffer, require('process'));
+})(require("buffer").Buffer, require("process"));

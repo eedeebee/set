@@ -1,13 +1,13 @@
 /* */ 
 (function(Buffer) {
   'use strict';
-  var crypto = require('crypto'),
-      url = require('url'),
-      util = require('util'),
-      HttpParser = require('../http_parser'),
-      Base = require('./base'),
-      Hybi = require('./hybi'),
-      Proxy = require('./proxy');
+  var crypto = require("crypto"),
+      url = require("url"),
+      util = require("util"),
+      HttpParser = require("../http_parser"),
+      Base = require("./base"),
+      Hybi = require("./hybi"),
+      Proxy = require("./proxy");
   var Client = function(_url, options) {
     this.version = 'hybi-13';
     Hybi.call(this, null, _url, options);
@@ -45,15 +45,15 @@
     },
     parse: function(chunk) {
       if (this.readyState === 3)
-        return;
+        return ;
       if (this.readyState > 0)
         return Hybi.prototype.parse.call(this, chunk);
       this._http.parse(chunk);
       if (!this._http.isComplete())
-        return;
+        return ;
       this._validateHandshake();
       if (this.readyState === 3)
-        return;
+        return ;
       this._open();
       this.parse(this._http.body);
     },
@@ -108,4 +108,4 @@
   for (var key in instance)
     Client.prototype[key] = instance[key];
   module.exports = Client;
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

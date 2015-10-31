@@ -1,8 +1,8 @@
 /* */ 
-var toObject = require('./toObject');
+var toObject = require("./toObject");
 function baseGet(object, path, pathKey) {
   if (object == null) {
-    return;
+    return ;
   }
   object = toObject(object);
   if (pathKey !== undefined && pathKey in object) {

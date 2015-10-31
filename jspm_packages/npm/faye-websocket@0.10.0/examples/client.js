@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var WebSocket = require('../lib/faye/websocket').Client,
-      deflate = require('permessage-deflate'),
-      fs = require('fs');
+  var WebSocket = require("../lib/faye/websocket").Client,
+      deflate = require("permessage-deflate"),
+      fs = require("fs");
   var url = process.argv[2],
       proxy = process.argv[3],
       ca = fs.readFileSync(__dirname + '/../spec/server.crt'),
@@ -30,4 +30,4 @@
   ws.onmessage = function(message) {
     console.log('[message]', message.data);
   };
-})(require('process'));
+})(require("process"));

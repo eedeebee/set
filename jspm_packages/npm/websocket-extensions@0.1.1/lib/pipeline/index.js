@@ -1,7 +1,7 @@
 /* */ 
 'use strict';
-var Cell = require('./cell'),
-    Pledge = require('./pledge');
+var Cell = require("./cell"),
+    Pledge = require("./pledge");
 var Pipeline = function(sessions) {
   this._cells = sessions.map(function(session) {
     return new Cell(session);
@@ -13,12 +13,12 @@ var Pipeline = function(sessions) {
 };
 Pipeline.prototype.processIncomingMessage = function(message, callback, context) {
   if (this._stopped.incoming)
-    return;
+    return ;
   this._loop('incoming', this._cells.length - 1, -1, -1, message, callback, context);
 };
 Pipeline.prototype.processOutgoingMessage = function(message, callback, context) {
   if (this._stopped.outgoing)
-    return;
+    return ;
   this._loop('outgoing', 0, this._cells.length, 1, message, callback, context);
 };
 Pipeline.prototype.close = function(callback, context) {

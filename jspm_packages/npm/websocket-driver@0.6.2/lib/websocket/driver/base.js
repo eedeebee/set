@@ -1,11 +1,11 @@
 /* */ 
 (function(process) {
   'use strict';
-  var Emitter = require('events').EventEmitter,
-      util = require('util'),
-      streams = require('../streams'),
-      Headers = require('./headers'),
-      Reader = require('./stream_reader');
+  var Emitter = require("events").EventEmitter,
+      util = require("util"),
+      streams = require("../streams"),
+      Headers = require("./headers"),
+      Reader = require("./stream_reader");
   var Base = function(request, url, options) {
     Emitter.call(this);
     Base.validateOptions(options || {}, ['maxLength', 'masking', 'requireMasking', 'protocols']);
@@ -47,7 +47,7 @@
       this.on('close', function() {
         var messages = self.messages;
         if (!messages.readable)
-          return;
+          return ;
         messages.readable = messages.writable = false;
         messages.emit('end');
       });
@@ -124,4 +124,4 @@
     this.data = data;
   };
   module.exports = Base;
-})(require('process'));
+})(require("process"));

@@ -1,6 +1,6 @@
 /* */ 
 'use strict';
-var RingBuffer = require('./ring_buffer');
+var RingBuffer = require("./ring_buffer");
 var Pledge = function() {
   this._complete = false;
   this._callbacks = new RingBuffer(Pledge.QUEUE_SIZE);

@@ -35,4 +35,4 @@
   for (var key in instance)
     Message.prototype[key] = instance[key];
   module.exports = Message;
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

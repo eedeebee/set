@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
   'use strict';
-  var Base = require('./base'),
-      util = require('util');
+  var Base = require("./base"),
+      util = require("util");
   var Draft75 = function(request, url, options) {
     Base.apply(this, arguments);
     this._stage = 0;
@@ -23,7 +23,7 @@
     },
     parse: function(chunk) {
       if (this.readyState > 1)
-        return;
+        return ;
       this._reader.put(chunk);
       this._reader.eachByte(function(octet) {
         var message;
@@ -101,4 +101,4 @@
   for (var key in instance)
     Draft75.prototype[key] = instance[key];
   module.exports = Draft75;
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

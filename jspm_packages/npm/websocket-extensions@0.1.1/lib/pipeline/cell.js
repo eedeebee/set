@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
   'use strict';
-  var Functor = require('./functor'),
-      Pledge = require('./pledge');
+  var Functor = require("./functor"),
+      Pledge = require("./pledge");
   var Cell = function(tuple) {
     this._ext = tuple[0];
     this._session = tuple[1];
@@ -37,11 +37,11 @@
     var fin = this._functors.incoming,
         fout = this._functors.outgoing;
     if (!this._closed || fin.pending + fout.pending !== 0)
-      return;
+      return ;
     if (this._session)
       this._session.close();
     this._session = null;
     this._closed.done();
   };
   module.exports = Cell;
-})(require('process'));
+})(require("process"));

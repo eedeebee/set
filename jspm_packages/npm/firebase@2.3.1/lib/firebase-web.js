@@ -4985,7 +4985,7 @@
         var d = c.message || c.data;
         d && this.f(d);
         this.gb();
-        return;
+        return ;
       }
       var e = this;
       this.ua.onopen = function() {
@@ -6779,4 +6779,4 @@
     U.prototype.resetPassword = U.prototype.Ve;
   })();
   module.exports = Firebase;
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

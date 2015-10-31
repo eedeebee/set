@@ -1,10 +1,10 @@
 /* */ 
 (function(Buffer) {
   'use strict';
-  var Base = require('./base'),
-      Draft75 = require('./draft75'),
-      crypto = require('crypto'),
-      util = require('util');
+  var Base = require("./base"),
+      Draft75 = require("./draft75"),
+      crypto = require("crypto"),
+      util = require("util");
   var numberFromKey = function(key) {
     return parseInt(key.match(/[0-9]/g).join(''), 10);
   };
@@ -63,10 +63,10 @@
     },
     _sendHandshakeBody: function() {
       if (!this._started)
-        return;
+        return ;
       var signature = this._handshakeSignature();
       if (!signature)
-        return;
+        return ;
       this._write(signature);
       this._stage = 0;
       this._open();
@@ -84,4 +84,4 @@
   for (var key in instance)
     Draft76.prototype[key] = instance[key];
   module.exports = Draft76;
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

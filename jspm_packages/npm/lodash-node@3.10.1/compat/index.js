@@ -1027,7 +1027,7 @@
       }
       function baseGet(object, path, pathKey) {
         if (object == null) {
-          return;
+          return ;
         }
         object = toObject(object);
         if (pathKey !== undefined && pathKey in object) {
@@ -1215,7 +1215,7 @@
         while (length--) {
           if (stackA[length] == srcValue) {
             object[key] = stackB[length];
-            return;
+            return ;
           }
         }
         var value = object[key],
@@ -4323,7 +4323,7 @@
             retUnwrapped = /^(?:first|last)$/.test(methodName),
             lodashFunc = lodash[retUnwrapped ? ('take' + (methodName == 'last' ? 'Right' : '')) : methodName];
         if (!lodashFunc) {
-          return;
+          return ;
         }
         lodash.prototype[methodName] = function() {
           var args = retUnwrapped ? [1] : arguments,
@@ -4422,4 +4422,4 @@
       }
     }
   }.call(this));
-})(require('process'));
+})(require("process"));

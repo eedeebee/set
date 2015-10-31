@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var test = require('tape');
-  var randomBytes = require('./index');
+  var test = require("tape");
+  var randomBytes = require("./index");
   test('sync', function(t) {
     t.plan(3);
     t.equals(randomBytes(3).length, 3, 'len: ' + 3);
@@ -32,4 +32,4 @@
       }));
     });
   }
-})(require('process'));
+})(require("process"));

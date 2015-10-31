@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var WebSocket = require('../lib/faye/websocket').Client,
-      deflate = require('permessage-deflate'),
-      pace = require('pace');
+  var WebSocket = require("../lib/faye/websocket").Client,
+      deflate = require("permessage-deflate"),
+      pace = require("pace");
   var host = 'ws://localhost:9001',
       agent = encodeURIComponent('node-' + process.version),
       cases = 0,
@@ -20,7 +20,7 @@
       url = host + '/updateReports?agent=' + agent;
       socket = new WebSocket(url);
       socket.onclose = process.exit;
-      return;
+      return ;
     }
     url = host + '/runCase?case=' + n + '&agent=' + agent;
     socket = new WebSocket(url, [], options);
@@ -33,4 +33,4 @@
   socket.onclose = function() {
     runCase(1);
   };
-})(require('process'));
+})(require("process"));

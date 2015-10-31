@@ -1,12 +1,12 @@
 /* */ 
 (function(Buffer) {
   'use strict';
-  var Stream = require('stream').Stream,
-      url = require('url'),
-      util = require('util'),
-      Base = require('./base'),
-      Headers = require('./headers'),
-      HttpParser = require('../http_parser');
+  var Stream = require("stream").Stream,
+      url = require("url"),
+      util = require("util"),
+      Base = require("./base"),
+      Headers = require("./headers"),
+      HttpParser = require("../http_parser");
   var PORTS = {
     'ws:': 80,
     'wss:': 443
@@ -73,7 +73,7 @@
     },
     end: function(chunk) {
       if (!this.writable)
-        return;
+        return ;
       if (chunk !== undefined)
         this.write(chunk);
       this.readable = this.writable = false;
@@ -87,4 +87,4 @@
   for (var key in instance)
     Proxy.prototype[key] = instance[key];
   module.exports = Proxy;
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var util = require('util'),
-      driver = require('websocket-driver'),
-      API = require('./websocket/api');
+  var util = require("util"),
+      driver = require("websocket-driver"),
+      API = require("./websocket/api");
   var WebSocket = function(request, socket, body, protocols, options) {
     options = options || {};
     this._stream = socket;
@@ -12,7 +12,7 @@
     });
     var self = this;
     if (!this._stream || !this._stream.writable)
-      return;
+      return ;
     if (!this._stream.readable)
       return this._stream.end();
     var catchup = function() {
@@ -33,7 +33,7 @@
     driver.validateOptions(options, validKeys);
   };
   WebSocket.WebSocket = WebSocket;
-  WebSocket.Client = require('./websocket/client');
-  WebSocket.EventSource = require('./eventsource');
+  WebSocket.Client = require("./websocket/client");
+  WebSocket.EventSource = require("./eventsource");
   module.exports = WebSocket;
-})(require('process'));
+})(require("process"));

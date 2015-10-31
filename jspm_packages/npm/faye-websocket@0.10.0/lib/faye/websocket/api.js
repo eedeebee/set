@@ -1,10 +1,10 @@
 /* */ 
 (function(Buffer) {
-  var Stream = require('stream').Stream,
-      util = require('util'),
-      driver = require('websocket-driver'),
-      EventTarget = require('./api/event_target'),
-      Event = require('./api/event');
+  var Stream = require("stream").Stream,
+      util = require("util"),
+      driver = require("websocket-driver"),
+      EventTarget = require("./api/event_target"),
+      Event = require("./api/event");
   var API = function(options) {
     options = options || {};
     driver.validateOptions(options, ['headers', 'extensions', 'maxLength', 'ping', 'proxy', 'tls', 'ca']);
@@ -112,7 +112,7 @@
     },
     _open: function() {
       if (this.readyState !== API.CONNECTING)
-        return;
+        return ;
       this.readyState = API.OPEN;
       this.protocol = this._driver.protocol || '';
       var event = new Event('open');
@@ -130,14 +130,14 @@
     },
     _emitError: function(message) {
       if (this.readyState >= API.CLOSING)
-        return;
+        return ;
       var event = new Event('error', {message: message});
       event.initEvent('error', false, false);
       this.dispatchEvent(event);
     },
     _beginClose: function(reason, code) {
       if (this.readyState === API.CLOSED)
-        return;
+        return ;
       this.readyState = API.CLOSING;
       this._closeParams = [reason, code];
       if (this._stream) {
@@ -148,7 +148,7 @@
     },
     _finalizeClose: function() {
       if (this.readyState === API.CLOSED)
-        return;
+        return ;
       this.readyState = API.CLOSED;
       if (this._pingTimer)
         clearInterval(this._pingTimer);
@@ -172,4 +172,4 @@
   for (var key in EventTarget)
     API.prototype[key] = EventTarget[key];
   module.exports = API;
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

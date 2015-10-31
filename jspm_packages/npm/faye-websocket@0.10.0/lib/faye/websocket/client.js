@@ -1,11 +1,11 @@
 /* */ 
-var util = require('util'),
-    net = require('net'),
-    tls = require('tls'),
-    url = require('url'),
-    driver = require('websocket-driver'),
-    API = require('./api'),
-    Event = require('./api/event');
+var util = require("util"),
+    net = require("net"),
+    tls = require("tls"),
+    url = require("url"),
+    driver = require("websocket-driver"),
+    API = require("./api"),
+    Event = require("./api/event");
 var DEFAULT_PORTS = {
   'http:': 80,
   'https:': 443,

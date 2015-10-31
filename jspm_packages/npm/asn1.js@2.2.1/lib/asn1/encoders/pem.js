@@ -1,9 +1,9 @@
 /* */ 
 (function(Buffer) {
-  var inherits = require('inherits');
-  var Buffer = require('buffer').Buffer;
-  var asn1 = require('../../asn1');
-  var DEREncoder = require('./der');
+  var inherits = require("inherits");
+  var Buffer = require("buffer").Buffer;
+  var asn1 = require("../../asn1");
+  var DEREncoder = require("./der");
   function PEMEncoder(entity) {
     DEREncoder.call(this, entity);
     this.enc = 'pem';
@@ -20,4 +20,4 @@
     out.push('-----END ' + options.label + '-----');
     return out.join('\n');
   };
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

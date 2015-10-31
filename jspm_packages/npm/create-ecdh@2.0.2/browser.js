@@ -1,7 +1,7 @@
 /* */ 
 (function(Buffer) {
-  var elliptic = require('elliptic');
-  var BN = require('bn.js');
+  var elliptic = require("elliptic");
+  var BN = require("bn.js");
   module.exports = function createECDH(curve) {
     return new ECDH(curve);
   };
@@ -99,4 +99,4 @@
       return buf.toString(enc);
     }
   }
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

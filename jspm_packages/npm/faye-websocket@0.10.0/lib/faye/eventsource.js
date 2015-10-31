@@ -1,12 +1,12 @@
 /* */ 
 (function(process) {
-  var Stream = require('stream').Stream,
-      util = require('util'),
-      driver = require('websocket-driver'),
-      Headers = require('websocket-driver/lib/websocket/driver/headers'),
-      API = require('./websocket/api'),
-      EventTarget = require('./websocket/api/event_target'),
-      Event = require('./websocket/api/event');
+  var Stream = require("stream").Stream,
+      util = require("util"),
+      driver = require("websocket-driver"),
+      Headers = require("websocket-driver/lib/websocket/driver/headers"),
+      API = require("./websocket/api"),
+      EventTarget = require("./websocket/api/event_target"),
+      Event = require("./websocket/api/event");
   var EventSource = function(request, response, options) {
     this.writable = true;
     options = options || {};
@@ -24,7 +24,7 @@
         headers.set(key, options.headers[key]);
     }
     if (!this._stream || !this._stream.writable)
-      return;
+      return ;
     process.nextTick(function() {
       self._open();
     });
@@ -66,7 +66,7 @@
     },
     _open: function() {
       if (this.readyState !== API.CONNECTING)
-        return;
+        return ;
       this.readyState = API.OPEN;
       var event = new Event('open');
       event.initEvent('open', false, false);
@@ -116,4 +116,4 @@
   for (var key in EventTarget)
     EventSource.prototype[key] = EventTarget[key];
   module.exports = EventSource;
-})(require('process'));
+})(require("process"));

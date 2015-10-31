@@ -1,5 +1,5 @@
 /* */ 
-var Event = require('./event');
+var Event = require("./event");
 var EventTarget = {
   onopen: null,
   onmessage: null,

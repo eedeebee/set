@@ -1,6 +1,6 @@
 /* */ 
 (function(process) {
-  var ProxyServer = require('../spec/proxy_server');
+  var ProxyServer = require("../spec/proxy_server");
   var port = process.argv[2],
       secure = process.argv[3] === 'tls',
       proxy = new ProxyServer({
@@ -8,4 +8,4 @@
         tls: secure
       });
   proxy.listen(port);
-})(require('process'));
+})(require("process"));

@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var assert = require('assert');
-  var BN = require('../lib/bn').BN;
-  var fixtures = require('./fixtures');
+  var assert = require("assert");
+  var BN = require("../lib/bn").BN;
+  var fixtures = require("./fixtures");
   describe('BN.js/Utils', function() {
     describe('.toString()', function() {
       describe('hex padding', function() {
@@ -68,4 +68,4 @@
       });
     });
   });
-})(require('buffer').Buffer);
+})(require("buffer").Buffer);

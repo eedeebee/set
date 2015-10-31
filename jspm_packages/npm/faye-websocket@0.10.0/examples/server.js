@@ -1,10 +1,10 @@
 /* */ 
 (function(process) {
-  var WebSocket = require('../lib/faye/websocket'),
-      deflate = require('permessage-deflate'),
-      fs = require('fs'),
-      http = require('http'),
-      https = require('https');
+  var WebSocket = require("../lib/faye/websocket"),
+      deflate = require("permessage-deflate"),
+      fs = require("fs"),
+      http = require("http"),
+      https = require("https");
   var port = process.argv[2] || 7000,
       secure = process.argv[3] === 'tls',
       options = {
@@ -60,4 +60,4 @@
   server.on('request', requestHandler);
   server.on('upgrade', upgradeHandler);
   server.listen(port);
-})(require('process'));
+})(require("process"));

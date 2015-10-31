@@ -1,11 +1,11 @@
 /* */ 
 'use strict';
-var util = require('util'),
-    HttpParser = require('../http_parser'),
-    Base = require('./base'),
-    Draft75 = require('./draft75'),
-    Draft76 = require('./draft76'),
-    Hybi = require('./hybi');
+var util = require("util"),
+    HttpParser = require("../http_parser"),
+    Base = require("./base"),
+    Draft75 = require("./draft75"),
+    Draft76 = require("./draft76"),
+    Hybi = require("./hybi");
 var Server = function(options) {
   Base.call(this, null, null, options);
   this._http = new HttpParser('request');
@@ -22,7 +22,7 @@ var instance = {
       return this._delegate.parse(chunk);
     this._http.parse(chunk);
     if (!this._http.isComplete())
-      return;
+      return ;
     this.method = this._http.method;
     this.url = this._http.url;
     this.headers = this._http.headers;

@@ -1,7 +1,7 @@
 /* */ 
 'use strict';
-var bn = require('bn.js');
-var elliptic = require('../../elliptic');
+var bn = require("bn.js");
+var elliptic = require("../../elliptic");
 var getNAF = elliptic.utils.getNAF;
 var getJSF = elliptic.utils.getJSF;
 var assert = elliptic.utils.assert;

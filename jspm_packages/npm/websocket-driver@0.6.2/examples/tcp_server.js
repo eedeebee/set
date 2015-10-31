@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var net = require('net'),
-      websocket = require('../lib/websocket/driver'),
-      deflate = require('permessage-deflate');
+  var net = require("net"),
+      websocket = require("../lib/websocket/driver"),
+      deflate = require("permessage-deflate");
   var server = net.createServer(function(connection) {
     var driver = websocket.server();
     driver.addExtension(deflate);
@@ -19,4 +19,4 @@
     driver.messages.pipe(driver.messages);
   });
   server.listen(process.argv[2]);
-})(require('process'));
+})(require("process"));

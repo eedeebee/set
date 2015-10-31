@@ -1078,7 +1078,7 @@
               b(c);
             });
           },
-          a = require('_stream_writable');
+          a = require("_stream_writable");
       a.prototype.write = function(a, b, k) {
         var m = this._writableState,
             l = !1;
@@ -1088,7 +1088,7 @@
         m.ended ? e(this, k) : d(this, m, a, k) && (l = c(this, m, a, b, k));
         return l;
       };
-      require('_stream_duplex').prototype.write = a.prototype.write;
+      require("_stream_duplex").prototype.write = a.prototype.write;
     }
   })();
   function mc(a, b) {
@@ -4375,7 +4375,7 @@
   }
   Jg.prototype.open = function(a, b, c) {
     var d = Nc(a),
-        e = "http" === d.scheme ? require('http') : require('https');
+        e = "http" === d.scheme ? require("http") : require("https");
     a = this.options.method;
     var f,
         h = {Accept: "application/json;text/plain"};
@@ -4959,7 +4959,7 @@
   }
   var nh = null;
   function kh(a, b) {
-    nh || (nh = require('request'));
+    nh || (nh = require("request"));
     nh(a, function(c, d, e) {
       if (c)
         throw "Rest request for " + a.url + " failed.";
@@ -4981,7 +4981,7 @@
   }
   ;
   var ph = null,
-      ph = require('faye-websocket').Client;
+      ph = require("faye-websocket").Client;
   function qh(a, b, c, d) {
     this.ne = a;
     this.f = Kc(this.ne);
@@ -5007,7 +5007,7 @@
       var d = c.message || c.data;
       d && this.f(d);
       this.eb();
-      return;
+      return ;
     }
     var e = this;
     this.ua.onopen = function() {
@@ -6800,4 +6800,4 @@
   };
   T.prototype.resetPassword = T.prototype.Se;
   module.exports = T;
-})(require('buffer').Buffer, require('process'));
+})(require("buffer").Buffer, require("process"));

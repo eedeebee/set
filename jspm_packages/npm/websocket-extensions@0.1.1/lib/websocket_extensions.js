@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
   'use strict';
-  var Parser = require('./parser'),
-      Pipeline = require('./pipeline/index');
+  var Parser = require("./parser"),
+      Pipeline = require("./pipeline/index");
   var Extensions = function() {
     this._rsv1 = this._rsv2 = this._rsv3 = null;
     this._byName = {};
@@ -35,7 +35,7 @@
       this._inOrder.forEach(function(ext) {
         var session = ext.createClientSession();
         if (!session)
-          return;
+          return ;
         var record = [ext, session];
         sessions.push(record);
         index[ext.name] = record;
@@ -76,10 +76,10 @@
       this._inOrder.forEach(function(ext) {
         var offer = offers.byName(ext.name);
         if (offer.length === 0 || this._reserved(ext))
-          return;
+          return ;
         var session = ext.createServerSession(offer);
         if (!session)
-          return;
+          return ;
         this._reserve(ext);
         sessions.push([ext, session]);
         response.push(Parser.serializeParams(ext.name, session.generateResponse()));
@@ -135,4 +135,4 @@
   for (var key in instance)
     Extensions.prototype[key] = instance[key];
   module.exports = Extensions;
-})(require('process'));
+})(require("process"));

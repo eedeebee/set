@@ -1283,4 +1283,4 @@
       return out;
     }
   })();
-})(require('process'));
+})(require("process"));
