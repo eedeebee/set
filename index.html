@@ -55,6 +55,7 @@
     </svg>
 
     <script src="jspm_packages/system.js"></script>
+    <script src="jspm_packages/npm/angular@1.4.7/angular.min.js"></script>
     <script src="config.js"></script>
     <script>
        System.import('./lib/main');
@@ -73,7 +74,10 @@
         <span class="msg"/>
       </div>
       <div id="players">
-        <h4 style="display: none" >Players</h4> 
+        <h4 style="" >Players</h4> 
+        <ul class="players">
+            <li class="player" ng-cloak ng-repeat="player in game.players"> {{ player.name }} </li>
+        </ul>
       </div>
       <div id="last-set">
         <h4>Set</h4>

@@ -88,8 +88,9 @@ h1 {
 #players {
     position: fixed;
     top: 0px;
-    left: 0px;
+    left: 10px;
     width: 160px;
+    text-align: left;
 }
 
 #last-set {
@@ -109,4 +110,13 @@ h1 {
 
 .card.selected {
     box-shadow: 0 0 0 5px #9c9;
+}
+
+.players {
+    list-style: none;
+    padding: 5px;
+}
+
+.player {
+    font-size: .8em;
 }
