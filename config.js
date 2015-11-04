@@ -1,16 +1,13 @@
 System.config({
-  "baseURL": "./",
-  "transpiler": "traceur",
-  "paths": {
-    "github:*": "jspm_packages/github/*.js",
-    "npm:*": "jspm_packages/npm/*.js",
-    "*": "*.js"
+  baseURL: "./",
+  defaultJSExtensions: true,
+  transpiler: "traceur",
+  paths: {
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
   },
-  "defaultJSExtensions": true
-});
 
-System.config({
-  "map": {
+  map: {
     "angular": "github:angular/bower-angular@1.4.7",
     "angularfire": "npm:angularfire@1.1.3",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
@@ -19,8 +16,8 @@ System.config({
     "firebase": "github:firebase/firebase-bower@2.3.1",
     "jquery": "github:components/jquery@2.1.4",
     "lodash-node": "npm:lodash-node@3.10.1",
-    "traceur": "github:jmcriffey/bower-traceur@0.0.88",
-    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
+    "traceur": "github:jmcriffey/bower-traceur@0.0.92",
+    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.92",
     "underscore": "npm:underscore@1.8.3",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -367,4 +364,3 @@ System.config({
     }
   }
 });
-

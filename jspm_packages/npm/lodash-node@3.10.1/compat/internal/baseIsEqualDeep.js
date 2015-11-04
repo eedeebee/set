@@ -1,10 +1,10 @@
 /* */ 
-var equalArrays = require("./equalArrays"),
-    equalByTag = require("./equalByTag"),
-    equalObjects = require("./equalObjects"),
-    isArray = require("../lang/isArray"),
-    isHostObject = require("./isHostObject"),
-    isTypedArray = require("../lang/isTypedArray");
+var equalArrays = require('./equalArrays'),
+    equalByTag = require('./equalByTag'),
+    equalObjects = require('./equalObjects'),
+    isArray = require('../lang/isArray'),
+    isHostObject = require('./isHostObject'),
+    isTypedArray = require('../lang/isTypedArray');
 var argsTag = '[object Arguments]',
     arrayTag = '[object Array]',
     objectTag = '[object Object]';

@@ -1,11 +1,11 @@
 /* */ 
-var baseGet = require("../internal/baseGet"),
-    baseSlice = require("../internal/baseSlice"),
-    isFunction = require("../lang/isFunction"),
-    isKey = require("../internal/isKey"),
-    last = require("../array/last"),
-    toObject = require("../internal/toObject"),
-    toPath = require("../internal/toPath");
+var baseGet = require('../internal/baseGet'),
+    baseSlice = require('../internal/baseSlice'),
+    isFunction = require('../lang/isFunction'),
+    isKey = require('../internal/isKey'),
+    last = require('../array/last'),
+    toObject = require('../internal/toObject'),
+    toPath = require('../internal/toPath');
 function result(object, path, defaultValue) {
   var result = object == null ? undefined : toObject(object)[path];
   if (result === undefined) {
