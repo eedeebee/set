@@ -64,7 +64,6 @@
   </head>
 
   <body ng-controller="game as game" ng-keypress="game.keyPress($event)" tabindex="0">
-    <div class="container">
     <div class="starter-template">
       <div id="error" style="display: none" class="alert alert-warning alert-dismissible" role="alert">
         <button type="button" class="close" ng-click="game.dismissError()" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -91,8 +90,7 @@
         <button class="btn btn-default btn-lg" ng-click="game.redeal()" type="button">New Game</button> 
       </div>
       <hr/>
-      <div id="board"/>
-    </div>
+      <div resize id="board"/>
     </div>
   </body>
 </html>
