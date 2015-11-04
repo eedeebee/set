@@ -90,7 +90,15 @@ h1 {
     top: 0px;
     left: 10px;
     width: 160px;
+    height: 140px;
+    overflow-y: scroll;
+    overflow-x: auto;
     text-align: left;
+}
+
+#player-list {
+    list-style: none;
+    padding: 5px;
 }
 
 #last-set {
@@ -110,11 +118,6 @@ h1 {
 
 .card.selected {
     box-shadow: 0 0 0 5px #9c9;
-}
-
-.players {
-    list-style: none;
-    padding: 5px;
 }
 
 .player {
