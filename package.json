@@ -2,7 +2,6 @@
   "jspm": {
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.4",
-      "angularfire": "npm:angularfire@^1.1.3",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "components/jquery": "github:components/jquery@^2.1.4",
       "d3": "github:mbostock/d3@^3.5.6",
