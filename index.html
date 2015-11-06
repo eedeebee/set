@@ -55,7 +55,6 @@
     </svg>
 
     <script src="jspm_packages/system.js"></script>
-    <script src="jspm_packages/github/angular/bower-angular@1.4.7/angular.min.js"></script>
     <script src="config.js"></script>
     <script>
        System.import('./lib/main');
@@ -72,10 +71,13 @@
       <div id="message" style="display: none" class="alert alert-info alert-dismissible" role="alert">
         <span class="msg"/>
       </div>
-      <div id="players">
-        <h4 style="" >Players</h4> 
-        <ul id="player-list">
-          <li class="player" ng-cloak ng-repeat="player in game.players"> {{ player.name }} </li>
+      <div class="dropdown" id="players">
+        <button type="button" class="btn btn-default dropdown-toggle" 
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+            >Players <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li class="player" ng-repeat="player in game.players"><a href="#">{{ player.name }}</a></li>
         </ul>
       </div>
       <div id="last-set">
@@ -83,14 +85,15 @@
       </div>
       <!-- <h1>SET</h1> -->
       <!-- <p class="lead">Give it a try!<br></p> -->
-      <div id="buttons">
-        <button class="btn btn-default btn-lg" ng-click="game.checkForSet()"  type="button">Set</button> 
-        <button class="btn btn-default btn-lg" ng-click="game.noset()" type="button">No Set</button> 
-        <button class="btn btn-default btn-lg" ng-click="game.hint()" type="button">Hint</button> 
-        <button class="btn btn-default btn-lg" ng-click="game.redeal()" type="button">New Game</button> 
+      <div class="btn-group" id="buttons">
+        <button class="btn btn-default" ng-click="game.checkForSet()"  type="button">Set</button> 
+        <button class="btn btn-default" ng-click="game.noset()" type="button">No Set</button> 
+        <button class="btn btn-default" ng-click="game.hint()" type="button">Hint</button> 
+        <button class="btn btn-default" ng-click="game.redeal()" type="button">New Game</button> 
       </div>
       <hr/>
-      <div resize id="board"/>
+      <div class="spinner"></div>
+      <div id="board"></div>
     </div>
   </body>
 </html>
