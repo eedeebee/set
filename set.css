@@ -11,10 +11,6 @@ text {
   font: normal 12px arial;
 }
 
-h1 {
-    margin-bottom: 20px;
-}
-
 .row {
     padding-bottom: 10px;
 }
@@ -75,16 +71,11 @@ h1 {
 }
 
 #error, #message {
-    width: 100%;
+    width: 30%;
     position: fixed;
     top: 0px;
     left: 0px;
-}
-
-#players {
-    position: fixed;
-    top: 10px;
-    left: 10px;
+    z-index: 999;
 }
 
 #last-set {

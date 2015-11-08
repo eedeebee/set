@@ -63,34 +63,32 @@
 
   </head>
 
-  <body ng-controller="game as game" ng-keypress="game.keyPress($event)" tabindex="0">
+  <body ng-controller="game as game" ng-keypress="game.keyPress($event)" tabindex="-1">
     <div id="error" style="display: none" class="alert alert-warning alert-dismissible" role="alert">
-      <button type="button" class="close" ng-click="game.dismissError()" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <button type="button" class="close" ng-click="game.dismissError()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <span class="msg"/>
     </div>
     <div id="message" style="display: none" class="alert alert-info alert-dismissible" role="alert">
       <span class="msg"/>
     </div>
-    <div class="dropdown" id="players">
-      <button type="button" class="btn btn-default dropdown-toggle" 
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-          >Players <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li class="player" ng-repeat="player in game.players"><a href="#" 
-              title="{{ player.uid }}" >{{ player.name }}</a></li>
-      </ul>
-    </div>
     <div id="last-set">
-      <h4>Set</h4>
+      <h4>Latest</h4>
     </div>
-    <!-- <h1>SET</h1> -->
-    <!-- <p class="lead">Give it a try!<br></p> -->
     <div class="btn-group" id="buttons">
       <button class="btn btn-default" ng-click="game.checkForSet()"  type="button">Set</button> 
       <button class="btn btn-default" ng-click="game.noset()" type="button">No Set</button> 
       <button class="btn btn-default" ng-click="game.hint()" type="button">Hint</button> 
       <button class="btn btn-default" ng-click="game.redeal()" type="button">New Game</button> 
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" 
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          >Players <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li class="player" ng-repeat="player in game.players"><a href="#" 
+              title="{{ player.uid }}" >{{ player.name }}</a></li>
+        </ul>
+      </div>
     </div>
     <hr/>
     <div class="spinner"></div>
