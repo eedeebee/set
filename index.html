@@ -85,8 +85,9 @@
           >Players <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-          <li class="player" ng-repeat="player in game.players"><a href="#" 
-              title="{{ player.uid }}" >{{ player.name }}</a></li>
+          <li class="player" ng-repeat="player in game.players"><a 
+            class="{{ player.me ? 'me' : ''}}" 
+            href="#" >{{ player.name }} {{ player.score }}</a></li>
         </ul>
       </div>
     </div>
