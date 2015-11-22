@@ -9,11 +9,11 @@ System.config({
 
   map: {
     "angular": "github:angular/bower-angular@1.4.7",
-    "angularfire": "npm:angularfire@1.1.3",
+    "angular": "github:angular/bower-angular@1.4.8",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
     "components/jquery": "github:components/jquery@2.1.4",
-    "d3": "github:mbostock/d3@3.5.6",
-    "firebase": "github:firebase/firebase-bower@2.3.1",
+    "d3": "github:mbostock/d3@3.5.9",
+    "firebase": "github:firebase/firebase-bower@2.3.2",
     "jquery": "github:components/jquery@2.1.4",
     "lodash-node": "npm:lodash-node@3.10.1",
     "traceur": "github:jmcriffey/bower-traceur@0.0.92",
