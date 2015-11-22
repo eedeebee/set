@@ -1,0 +1,1 @@
+module.exports = require("github:mbostock/d3@3.5.9/d3");
