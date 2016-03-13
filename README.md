@@ -5,6 +5,8 @@ There are two versions so far.
 - A command line engine written in python
 - A web page written using ES6, using svg and D3.
 
+Multiplayer webapp runs at https://eedeebee.github.io/set
+
 # Pre-requisites
 
 For the python command line:
