@@ -9,9 +9,9 @@ Multiplayer webapp runs at https://eedeebee.github.io/set
 
 # Pre-requisites
 
-For the python command line:
+For the python command line on MacOS 10.15:
 
-    % pip3 install termcolor
+    % pip3 install termcolor --user
     % python3 set.py
 
 For the web app
