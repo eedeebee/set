@@ -4,8 +4,8 @@
       "angular": "github:angular/bower-angular@^1.4.7",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "components/jquery": "github:components/jquery@^2.1.4",
-      "d3": "github:mbostock/d3@^3.5.6",
-      "firebase": "github:firebase/firebase-bower@^2.2.9",
+      "d3": "github:d3/d3@^3.5.6",
+      "firebase": "github:firebase/firebase-bower@^7.17.2",
       "jquery": "github:components/jquery@^2.1.4",
       "lodash-node": "npm:lodash-node@^3.10.1",
       "underscore": "npm:underscore@^1.8.3"
@@ -16,6 +16,6 @@
     }
   },
   "devDependencies": {
-    "jspm": "^0.16.14"
+    "jspm": "^0.16.55"
   }
 }
