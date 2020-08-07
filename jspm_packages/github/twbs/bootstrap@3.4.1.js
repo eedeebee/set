@@ -1,0 +1,1 @@
+module.exports = require("github:twbs/bootstrap@3.4.1/js/bootstrap.js");

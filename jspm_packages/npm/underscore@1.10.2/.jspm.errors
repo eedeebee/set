@@ -1,0 +1,331 @@
+MultipleErrors: /Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-all.js:1:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-all.js:1:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-all.js:1:10: Unexpected reserved word default
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-all.js:1:25: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-all.js:2:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-all.js:2:15: Semi-colon expected
+
+MultipleErrors: /Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:1:1: Unexpected reserved word import
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:1:13: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:1:24: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:1:29: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:2:1: Unexpected reserved word import
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:2:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:2:23: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:9:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:9:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:9:8: Unexpected reserved word default
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index-default.js:9:16: Semi-colon expected
+
+MultipleErrors: /Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:42:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:42:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:42:8: Unexpected reserved word default
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:42:16: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:49:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:49:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:87:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:87:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:103:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:103:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:172:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:172:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:187:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:187:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:187:15: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:187:18: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:190:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:190:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:201:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:201:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:201:14: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:201:17: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:230:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:230:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:231:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:231:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:231:17: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:231:20: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:231:34: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:231:37: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:234:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:234:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:235:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:235:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:235:22: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:235:25: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:238:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:238:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:243:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:243:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:243:15: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:243:18: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:246:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:246:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:254:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:254:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:254:17: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:254:20: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:257:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:257:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:262:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:262:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:272:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:272:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:272:16: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:272:19: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:275:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:275:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:285:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:285:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:285:15: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:285:18: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:288:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:288:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:293:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:293:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:293:19: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:293:22: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:293:41: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:293:44: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:296:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:296:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:318:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:318:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:324:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:324:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:330:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:330:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:335:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:335:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:360:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:360:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:385:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:385:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:393:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:393:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:412:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:412:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:447:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:447:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:453:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:453:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:460:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:460:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:466:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:466:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:478:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:478:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:485:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:485:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:494:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:494:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:499:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:499:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:499:16: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:499:19: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:499:31: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:499:34: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:504:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:504:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:510:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:510:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:519:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:519:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:522:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:522:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:522:15: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:522:18: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:522:29: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:522:32: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:525:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:525:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:552:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:552:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:557:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:557:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:566:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:566:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:592:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:592:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:592:15: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:592:18: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:596:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:596:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:602:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:602:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:619:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:619:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:628:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:628:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:640:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:640:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:645:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:645:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:671:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:671:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:672:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:672:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:676:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:676:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:716:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:716:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:717:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:717:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:722:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:722:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:743:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:743:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:769:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:769:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:781:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:781:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:800:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:800:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:811:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:811:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:824:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:824:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:832:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:832:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:839:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:839:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:884:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:884:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:916:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:916:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:921:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:921:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:929:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:929:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:941:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:941:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:950:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:950:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:963:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:963:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:992:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:992:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1003:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1003:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1013:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1013:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1025:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1025:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1039:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1039:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1050:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1050:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1060:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1060:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1067:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1067:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1067:20: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1067:23: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1089:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1089:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1093:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1093:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1094:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1094:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1094:20: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1094:23: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1097:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1097:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1112:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1112:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1132:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1132:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1147:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1147:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1152:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1152:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1159:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1159:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1167:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1167:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1173:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1173:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1291:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1291:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1297:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1297:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1304:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1304:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1317:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1317:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1320:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1320:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1326:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1326:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1327:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1327:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1328:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1328:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1329:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1329:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1330:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1330:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1331:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1331:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1332:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1332:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1333:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1333:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1334:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1334:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1335:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1335:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1336:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1336:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1337:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1337:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1359:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1359:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1364:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1364:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1369:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1369:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1374:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1374:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1379:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1379:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1385:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1385:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1404:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1404:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1409:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1409:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1415:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1415:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1419:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1419:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1429:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1429:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1440:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1440:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1446:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1446:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1446:18: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1446:21: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1449:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1449:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1457:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1457:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1466:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1466:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1495:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1495:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1496:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1496:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1501:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1501:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1521:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1521:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1528:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1528:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1560:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1560:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1618:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1618:8: Semi-colon expected
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1636:1: Unexpected reserved word export
+/Users/ericbloch/.jspm/packages/npm/underscore@1.10.2/modules/index.js:1636:8: Semi-colon expected
