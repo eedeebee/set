@@ -12,7 +12,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.4.1",
     "components/jquery": "github:components/jquery@2.2.4",
     "d3": "github:d3/d3@3.5.17",
-    "firebase": "github:firebase/firebase-bower@7.17.2",
+    "firebase": "github:firebase/firebase-bower@7.19.1",
     "jquery": "github:components/jquery@2.2.4",
     "lodash-node": "npm:lodash-node@3.10.2",
     "traceur": "github:jmcriffey/bower-traceur@0.0.92",
