@@ -71,9 +71,7 @@
     <div id="message" style="display: none" class="alert alert-info alert-dismissible" role="alert">
       <span class="msg"/>
     </div>
-    <div id="last-set">
-      <h4>Latest</h4>
-    </div>
+
     <div class="btn-group" id="buttons">
       <button class="btn btn-default" ng-click="game.checkForSet()"  type="button">Set</button> 
       <button class="btn btn-default" ng-click="game.noset()" type="button">No Set</button> 
@@ -86,11 +84,16 @@
         </button>
         <ul class="dropdown-menu">
           <li class="player" ng-repeat="player in game.players"><a 
-            class="{{ player.me ? 'me' : ''}}" 
-            href="#" >{{ player.name }} {{ player.score }}</a></li>
+            class="{{ player.uid == game.user.uid ? 'me' : '' }}" 
+            href="#" >{{ player.name }} ({{ player.score }})</a></li>
         </ul>
       </div>
     </div>
+    <div id="last-set">
+        <h5>Latest set!</h5>
+    </div>
+
+
     <hr/>
     <div class="spinner"></div>
     <div id="board"></div>
