@@ -76,6 +76,7 @@ text {
     top: 0px;
     left: 0px;
     z-index: 999;
+    font-size: .8em;
 }
 
 #last-set {
